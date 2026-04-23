@@ -1,0 +1,71 @@
+---
+const { totalPages, currentPage } = Astro.props;
+import { Icon } from "astro-icon/components";
+
+const getPageNumbers = () => {
+  const pageNumbers = [];
+  for (let i = 1; i <= totalPages; i++) {
+    pageNumbers.push(i);
+  }
+  return pageNumbers;
+};
+
+const pageNumbers = getPageNumbers();
+---
+
+
+<nav class="mt-8">
+  <ul class="flex items-center justify-center gap-2">
+
+    {/* Previous button */}
+    {currentPage > 1 && (
+      <li>
+        <a
+          href={currentPage - 1 === 1 ? '/blog/' : `/blog/page/${currentPage - 1}/`}
+          class="flex items-center justify-center px-4 py-2 rounded-lg 
+                 bg-linear-to-r from-green-400 to-blue-400 
+                 text-gray-900 font-medium shadow 
+                 hover:opacity-90 transition"
+        >
+          <Icon name="mdi:menu-left" class="text-4xl" />
+        </a>
+      </li>
+    )}
+
+    {/* Page number buttons */}
+    {pageNumbers.map((pageNumber) => (
+      <li key={pageNumber}>
+        <a
+          href={pageNumber === 1 ? '/blog/' : `/blog/page/${pageNumber}/`}
+          class={`flex items-center justify-center px-4 py-2 rounded-lg font-medium transition
+            ${
+              currentPage === pageNumber
+                ? 'bg-linear-to-r from-green-400 to-blue-400 text-gray-900 shadow-lg scale-105'
+                : 'bg-gray-100 text-gray-700 hover:bg-linear-to-r hover:from-green-400 hover:to-blue-400 hover:text-gray-900'
+            }`}
+        >
+          {pageNumber}
+        </a>
+      </li>
+    ))}
+
+    {/* Next button */}
+    {currentPage < totalPages && (
+      <li>
+        <a
+          href={`/blog/page/${currentPage + 1}/`}
+          class="flex items-center justify-center px-4 py-2 rounded-lg 
+                 bg-linear-to-r from-green-400 to-blue-400 
+                 text-gray-900 font-medium shadow 
+                 hover:opacity-90 transition"
+        >
+          <Icon name="mdi:menu-right" class="text-4xl" />
+        </a>
+      </li>
+    )}
+
+  </ul>
+</nav>
+
+
+

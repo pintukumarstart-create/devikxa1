@@ -1,0 +1,329 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import dateFormat  from "../../lib/utils/dateFormat";
+import readingTime  from "../../lib/utils/readingTime";
+import Footer from '../../components/Footer.astro';
+import RecentBlog from '../../components/blog/RecentBlog.astro'
+import Category from '../../components/blog/Category.astro'
+import { Icon } from "astro-icon/components";
+
+
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  const filteredPosts = posts.filter(post => post.slug !== "-index");
+  return filteredPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await post.render();
+const { title, date, image, authors, authors_discription, author_img, categories, views, description, meta_title} = post.data;
+
+
+const h2Headings = headings ? headings.filter(heading => heading.depth === 2) : [];
+
+---
+
+<Layout title={meta_title || title} description={description}>
+
+       <!-- Reading Progress Bar -->
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="reading-progress"></div>
+    </div>
+
+    <section class="text-center py-30 px-4 md:px-16 bg-linear-to-r from-green-400 to-blue-400 text-gray-900">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+       {title}
+      </h1>
+
+      <div class="flex justify-center space-x-4">
+        <div class="blog-meta">
+                            <div class="meta-item">
+                                  <Icon name="mdi:calendar" class="text-3xl"/>
+                                <span>{dateFormat(date)}</span>
+                            </div>
+                            <div class="meta-item">
+                               <Icon name="mdi:clock" class="text-3xl"/>
+                                <span>{readingTime(post.body)}</span>
+                            </div>
+                            <div class="meta-item">
+                               <Icon name="mdi:eye" class="text-3xl"/>
+                                <span>{views}</span>
+                            </div>
+                        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+<script type="module">
+
+import { gsap } from "https://cdn.skypack.dev/gsap";
+  import { ScrollToPlugin } from "https://cdn.skypack.dev/gsap/ScrollToPlugin";
+
+  gsap.registerPlugin(ScrollToPlugin);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tocLinks = document.querySelectorAll(".toc-link");
+
+    tocLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: { y: targetElement, offsetY: 95 },
+            ease: "power2.out"
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+    <div class="container mx-auto px-4 ">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-auto">
+            <div class="lg:col-span-8">
+                <div class="blog-container">
+
+                    <!-- Blog Content -->
+                    <div class="blog-content">
+                        <!-- Back Button -->
+                        <a href="/blog/" class="back-btn mb-4">
+                           <Icon name="mdi:home" class="text-3xl"/>
+                            Blog 
+                        </a>
+
+                       
+
+                        <!-- Featured Image -->
+                        {image &&  <img src={image}
+                             alt={title} 
+                             class="featured-image"
+                             onerror="this.src='/images/logo.png'; this.alt='Image failed to load';" /> }
+
+                           <div class="toc-container">
+                            <div class="toc-title">
+                                <i class="fas fa-list"></i> Table of Contents
+                            </div>
+                            <ul class="toc-list" id="toc">
+                                {h2Headings.map((heading, index) => (
+                                    <li key={index} class="toc-item">
+                                        <a href={`#${heading.slug}`} class="toc-link">{`${index + 1}. ${heading.text}`}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+
+
+
+<style>
+  #improve-cash-flow {
+  
+  font-size: 80px !important;
+  
+  }
+</style>
+
+
+                       <div class="content-text">
+                            <Content />
+                        </div>
+
+
+                        <!-- Social Share -->
+                        <div class="social-share">
+                            <a href="#" class="social-btn facebook" title="Share on Facebook">
+                                <Icon name="mdi:facebook" class="text-3xl"/>
+                            </a>
+                            <a href="#" class="social-btn twitter" title="Share on Twitter">
+                                <Icon name="mdi:twitter" class="text-3xl" />
+                            </a>
+                            <a href="#" class="social-btn linkedin" title="Share on LinkedIn">
+                                <Icon name="mdi:linkedin" class="text-3xl" />
+                            </a>
+                            <a href="#" class="social-btn whatsapp" title="Share on WhatsApp">
+                                <Icon name="mdi:whatsapp" class="text-3xl" />
+                            </a>
+                        </div>
+
+<div class="w-full rounded max-w-4xl mx-auto overflow-hidden bg-white dark:bg-gray-800/50 backdrop-blur-lg">
+    <div class="relative p-6 ">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5 dark:opacity-10">
+            <div
+                class="absolute inset-0 bg-linear-to-r from-pink-100 via-purple-100 to-indigo-100 dark:from-green-200 dark:via-blue-300 dark:to-green-300">
+            </div>
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0); background-size: 20px 20px;">
+            </div>
+        </div>
+
+        <!-- Content Container -->
+        <div class="relative flex flex-col md:flex-row md:items-center gap-6">
+            <!-- Profile Image -->
+            <div class="flex-shrink-0">
+                <div class="relative group">
+                    <div
+                        class="absolute w-28 h-28 -inset-0.5 bg-linear-to-r from-green-600 to-blue-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-200">
+                    </div>
+                    <img
+            src={author_img}
+            class="relative w-24 h-24 rounded-full object-cover border-2 border-white dark:border-gray-700"
+            alt={authors}
+          />
+                </div>
+            </div>
+
+            <!-- Text Content -->
+            <div class="flex-1 space-y-4">
+                <div>
+                    <h4 class="text-2xl font-bold text-gray-900 dark:text-white">{authors}</h4>
+                    <p class="mt-1 text-gray-600 dark:text-gray-300">
+                    {authors_discription}
+                    </p>
+                </div>
+
+                <!-- Social Links -->
+              <!--   <div class="flex gap-4">
+                    <a href="https://www.youtube.com/@mcqmate" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700/50 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-colors duration-200">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.5949 4.45999C21.5421 4.71353 22.2865 5.45785 22.54 6.40501C22.9982 8.12001 23 11.7004 23 11.7004C23 11.7004 23 15.2807 22.54 16.9957C22.2865 17.9429 21.5421 18.6872 20.5949 18.9407C18.88 19.4007 12 19.4007 12 19.4007C12 19.4007 5.12001 19.4007 3.405 18.9407C2.45785 18.6872 1.71353 17.9429 1.45999 16.9957C1 15.2807 1 11.7004 1 11.7004C1 11.7004 1 8.12001 1.45999 6.40501C1.71353 5.45785 2.45785 4.71353 3.405 4.45999C5.12001 4 12 4 12 4C12 4 18.88 4 20.5949 4.45999ZM15.5134 11.7007L9.79788 15.0003V8.40101L15.5134 11.7007Z"
+                                stroke="currentColor" stroke-linejoin="round"></path>
+                        </svg>
+                        <span>YouTube</span>
+                    </a>
+
+                    <a href="https://mcqmate.com/" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700/50 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600/50 transition-colors duration-200">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418">
+                            </path>
+                        </svg>
+                        <span>Website</span>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-4">
+                <div class="sidebar mt-4">
+                    <!-- Recent Posts Section -->
+                             <RecentBlog />
+                    <!-- Categories Section -->
+                    <div class="sidebar-section">
+                        <h4 class="sidebar-title">Categories</h4>
+                        <Category/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script is:inline>
+        // Add reading progress indicator
+        window.addEventListener('scroll', function() {
+            const article = document.querySelector('.blog-content');
+            const scrolled = window.pageYOffset;
+            const rate = scrolled / (document.body.scrollHeight - window.innerHeight);
+            const progress = Math.round(rate * 100);
+            
+            // Update progress bar
+            const progressBar = document.getElementById('reading-progress');
+            progressBar.style.width = progress + '%';
+        });
+
+  document.getElementById("bloghidden").style.display = "none";
+
+
+        // Social share functionality
+        document.querySelectorAll('.social-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const platform = this.classList[1];
+                const url = encodeURIComponent(window.location.href);
+                const title = encodeURIComponent(document.title);
+                
+                let shareUrl = '';
+                switch(platform) {
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                        break;
+                    case 'twitter':
+                        shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+                        break;
+                    case 'linkedin':
+                        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl = `https://wa.me/?text=${title} ${url}`;
+                        break;
+                }
+                
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<Footer/>
+
+
+
+       <div>
+    <a class="move-top" href="#" onClick="window.scrollToTop()"><i class="fa-solid fa-caret-up"></i></a>
+  </div>
+</Layout>

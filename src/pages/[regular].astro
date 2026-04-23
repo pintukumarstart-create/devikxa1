@@ -1,0 +1,32 @@
+---
+import Header from '../components/SimpleHeader.astro';
+import Layout from "../layouts/Layout.astro";
+import Default from "../layouts/Default.astro";
+import { getSinglePage } from "../lib/contentParser.astro";
+
+export async function getStaticPaths() {
+  const pages = await getSinglePage("pages");
+
+  const paths = pages.map((page: any) => ({
+    params: {
+      regular: page.slug,
+    },
+    props: { page },
+  }));
+  return paths;
+}
+
+const { page } = Astro.props;
+
+const { title,  description } = page.data;
+const page_data = {
+  ...page.data,
+};
+---
+
+<Layout title={title} description={description}>
+
+  <Default data={page} />
+
+
+</Layout>

@@ -1,0 +1,169 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<header class="w-full bg-white z-40 fixed">
+  <!-- Top Bar -->
+  <div id="bloghidden" class="hidden lg:flex justify-between items-center bg-black text-gray-300 px-4 py-3">
+    <div class="flex space-x-6 items-center">
+      <div class="flex items-center space-x-2" data-aos="fade-right" data-aos-delay="100" data-aos-duration="900">
+        <Icon name="mdi:email" class="text-white text-2xl" />
+        <a href="mailto:info@devikxa.com?subject=i need to know more about your service"><span class="text-white">info@devikxa.com</span></a>
+      </div>
+
+      <div class="flex items-center space-x-2 border-l border-gray-600 pl-4" data-aos="fade-right" data-aos-delay="200" data-aos-duration="900">
+        <Icon name="mdi:phone" class="text-white text-2xl" />
+        <span class="text-white">+91-95079 25579</span>
+      </div>
+    </div>
+
+    <div class="flex space-x-5">
+      <a href="https://www.facebook.com/devikxa1" rel="nofollow" aria-label="facebook link" ><Icon name="line-md:facebook" class="text-white text-3xl hover:text-blue-400" data-aos="fade-left" data-aos-delay="100" data-aos-duration="900"/></a>
+      <a href="https://www.x.com/devikxa" rel="nofollow" aria-label="twitter link"> <Icon name="line-md:twitter" class="text-white text-3xl hover:text-blue-300" data-aos="fade-left" data-aos-delay="200" data-aos-duration="900"/></a>
+      <a href="https://in.linkedin.com/company/devikxa" rel="nofollow" aria-label="linkedin link"><Icon name="line-md:linkedin" class="text-white text-3xl hover:text-blue-500" data-aos="fade-left" data-aos-delay="300" data-aos-duration="900"/></a>
+      <a href="https://www.instagram.com/devikxa1/" rel="nofollow" aria-label="instagram link"><Icon name="line-md:instagram" class="text-white text-3xl hover:text-pink-500" data-aos="fade-left" data-aos-delay="400" data-aos-duration="900"/></a>
+      <!-- <a href=""><Icon name="line-md:youtube" class="text-white text-3xl hover:text-red-600" data-aos="fade-left" data-aos-delay="500" data-aos-duration="900"/></a> -->
+    </div>
+  </div>
+
+  <!-- Main Nav Container -->
+  <div class="w-full bg-linear-to-r from-green-400 to-blue-400 text-gray-900 shadow-xl/30">
+    <div class="flex justify-between items-center px-3 py-2">
+      <!-- Logo -->
+      <a href="/" class="flex items-center" aria-label="Go to Homepage">
+        <img src="/images/logo.png" alt="devikxa logo" class="w-35" width="245" height="95" fetchpriority="high" />
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center space-x-8 font-medium">
+        <a href="/" class="hover:text-blue-600" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">Home</a>
+
+        <!-- SERVICES DROPDOWN -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-blue-600" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+            Services
+            <Icon name="mdi:chevron-down" class="text-xl" />
+          </button>
+
+          <!-- Dropdown -->
+          <div class="absolute hidden group-hover:block bg-linear-to-r from-green-400 to-blue-400  text-gray-900 rounded shadow-lg p-4 w-64">
+            <ul class="space-y-2 px-2 py-2">
+              <li><a class="hover:text-blue-600 block transition-all duration-300 ease-in-out hover:pl-2" href="/services/digital-marketing-company-india/">Digital Marketing </a></li>
+              <li><a class="hover:text-blue-600 block transition-all duration-300 ease-in-out hover:pl-2" href="/services/website-design-company-india/">Web Design</a></li>
+              <li><a class="hover:text-blue-600 block transition-all duration-300 ease-in-out hover:pl-2" href="/services/seo-service-india/">SEO Service</a></li>
+              <li><a class="hover:text-blue-600 block transition-all duration-300 ease-in-out hover:pl-2" href="/services/ppc-management-services-india/">PPC Service</a></li>
+              <li><a class="hover:text-blue-600 block transition-all duration-300 ease-in-out hover:pl-2" href="/services/social-media-marketing-agency-india/">SMM Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="/about-us/" class="hover:text-blue-600" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">About Us</a>
+        <a href="/contact-us/" class="hover:text-blue-600" data-aos="fade-up" data-aos-delay="500" data-aos-duration="900">Contact Us</a>
+
+        <a href="tel:+919507925579" class="flex items-center gap-2 text-gray-800 font-bold" data-aos="fade-up" data-aos-delay="600" data-aos-duration="900">
+          <Icon name="line-md:phone-call-loop" class="text-3xl" />
+          <span class="animate-pulse bg-linear-to-r from-gray-700 via-gray-800 to-gray-900 hover:text-blue-600 text-transparent bg-clip-text">
+            +91-95079 25579
+          </span>
+        </a>
+      </nav>
+
+      <!-- Right Side (Mobile + WhatsApp) -->
+      <div class="flex items-center gap-4">
+        <a class="md:hidden flex items-center gap-2" href="tel:+919507925579" aria-label="Call">
+          <Icon name="line-md:phone-call-loop" class="text-3xl text-gray-800 hover:text-blue-600" />
+        </a>
+
+        <a href="https://wa.me/+919507925579" aria-label="Whatsapp" data-aos="fade-up" data-aos-delay="700" data-aos-duration="900">
+          <Icon name="mdi:whatsapp" class="text-3xl text-gray-800 hover:text-blue-600" />
+        </a>
+
+		<a href="mailto:info@devikxa.com" aria-label="Email" data-aos="fade-up" data-aos-delay="800" data-aos-duration="900">
+          <Icon name="mdi:email" class="text-3xl text-gray-800 hover:text-blue-600" />
+        </a>
+
+		<span class="hidden lg:block" data-aos="fade-up" data-aos-delay="900" data-aos-duration="900">
+         <a class="flex px-2 py-2 border border-gray-900 rounded hover:text-blue-600" aria-label="hubspot book meeting" href="#">
+          <Icon name="mdi:hubspot" class="text-3xl text-gray-800" /> Book meeting
+        </a>
+		</span>
+
+
+        <!-- Mobile Toggle -->
+        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1" aria-label="menue button">
+          <span class="w-6 h-0.5 bg-gray-800"></span>
+          <span class="w-6 h-0.5 bg-gray-800"></span>
+          <span class="w-6 h-0.5 bg-gray-800"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobileMenu"
+    class="fixed top-0 left-0 w-72 h-full bg-linear-to-r from-green-400 to-blue-400 text-gray-900 shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] transform -translate-x-full transition-all duration-300 p-6 z-50"
+  >
+    <button id="closeMenu" class="text-4xl font-bold">&times;</button>
+
+    <ul class="mt-6 space-y-4 text-lg">
+      <li><a href="/" class="block">Home</a></li>
+
+      <!-- Mobile Dropdown -->
+      <li>
+        <details class="group">
+          <summary class="cursor-pointer flex justify-between items-center">
+            Services
+            <Icon name="mdi:chevron-down" class="text-xl" />
+          </summary>
+
+          <ul class="ml-4 mt-2 space-y-2">
+            <li><a href="/services/digital-marketing-company-india/">Digital Marketing </a></li>
+            <li><a href="/services/website-design-company-india/">Web Design</a></li>
+            <li><a href="/services/seo-service-india/">SEO Service</a></li>
+            <li><a href="/services/ppc-management-services-india/">PPC Service</a></li>
+            <li><a href="/services/social-media-marketing-agency-india/">SMM Service</a></li>
+          </ul>
+        </details>
+      </li>
+
+      <li><a href="/about-us">About Us</a></li>
+      <li><a href="/contact-us">Contact Us</a></li>
+
+      <li class="border-2 border-dashed border-gray-300"></li>
+
+	  <li><a class="flex flex-row gap-2" href="tel:+919507925579">
+          <Icon name="line-md:phone-call-loop" class="text-3xl text-gray-800" />+91-9507925579
+        </a>
+	</li>
+
+	  <li><a class="flex flex-row gap-2" href="https://wa.me/+919507925579">
+          <Icon name="mdi:whatsapp" class="text-3xl text-gray-800" /> +91-9507925579
+        </a>
+	</li>
+
+	  <li><a class="flex flex-row gap-2" href="https://wa.me/+919507925579">
+          <Icon name="mdi:hubspot" class="text-3xl text-gray-800" />Book Meeting
+        </a>
+	</li>
+
+	<li><a class="flex flex-row gap-2" href="mailto:info@devikxa.com?subject=i need to know more about your service">
+          <Icon name="mdi:email" class="text-3xl text-gray-800" />info@devikxa.com
+        </a>
+	</li>
+	  
+    </ul>
+  </div>
+</header>
+
+
+	<script is:inline>
+document.getElementById("mobileMenuBtn").onclick = () => {
+  document.getElementById("mobileMenu").classList.remove("-translate-x-full");
+};
+
+document.getElementById("closeMenu").onclick = () => {
+  document.getElementById("mobileMenu").classList.add("-translate-x-full");
+};
+</script>
+

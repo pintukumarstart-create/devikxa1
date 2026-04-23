@@ -1,0 +1,241 @@
+---
+import '../styles/global.css';
+import 'aos/dist/aos.css';
+import SmimpleHeader from '../components/SimpleHeader.astro';
+import ChatBot from '../components/ChatBot.astro';
+import Header from '../components/Header.astro';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title, description, image, keywords } = Astro.props;
+
+---
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="generator" content={Astro.generator} />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {keywords && (
+      <meta name="keywords" content={keywords.join(", ")} />
+    )}
+  <link rel="canonical" href={canonicalURL}>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+   <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48">
+  <link rel="sitemap" href="/sitemap.xml" />
+
+  <meta name="geo.region" content="IN-RJ" />
+  <meta name="geo.placename" content="Jaipur" />
+  <meta name="geo.position" content="26.9124;75.7873" />
+  <meta name="ICBM" content="26.9124, 75.7873" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={new URL('/images/logo.png', Astro.url)}>
+  <meta property="og:site_name" content="DevikXa">
+
+ <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content={canonicalURL}>
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={new URL('/images/logo.png', Astro.url)}>
+<meta name="twitter:site" content="@devikxa">
+<meta name="twitter:creator" content="@devikxa">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+
+<!-- Google tag (gtag.js) -->
+<script is:inline>
+  function loadAnalytics() {
+    var script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-JZW1G71VSM";
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JZW1G71VSM');
+  }
+
+  // Load on user interaction...
+  window.addEventListener('scroll', loadAnalytics, {once: true});
+  window.addEventListener('mousemove', loadAnalytics, {once: true});
+  window.addEventListener('touchstart', loadAnalytics, {once: true});
+  
+  // ...or as a backup, load after 4 seconds automatically
+  setTimeout(loadAnalytics, 4000);
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "DevikXa",
+    "description": "Creative Web Design, Development & Digital Marketing Agency in Jaipur",
+    "url": "https://www.devikxa.com",
+    "logo": "https://www.devikxa.com/images/logo.png",
+    "image": "https://www.devikxa.com/images/logo.png",
+    "telephone": "+91-9507925579",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "70-A sodala road",
+      "addressLocality": "Jaipur",
+      "postalCode": "302012",
+      "addressCountry": "India"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.9124,
+      "longitude": 75.7873
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/devikxa1",
+      "https://www.instagram.com/devikxa1",
+      "https://twitter.com/devikxa",
+      "https://www.linkedin.com/company/devikxa"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "200"
+    }
+  }
+  </script>
+  
+	</head>
+	<body>
+
+<SmimpleHeader />
+<main role="main" class="pt-12">
+
+	<slot />
+
+  <ChatBot />
+</main>
+	
+
+
+
+
+  
+  <style>
+    :root {
+      --primary-blue: #2563eb;
+      --primary-green: #10b981;
+    }
+
+    .bg-linear-to-r {
+      background: linear-gradient(to right, var(--tw-gradient-stops));
+    }
+    
+    .bg-linear-to-bl {
+      background: linear-gradient(to bottom left, var(--tw-gradient-stops));
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, var(--primary-blue), var(--primary-green));
+      border-radius: 5px;
+    }
+    
+    /* Animation classes */
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    
+    .hover-scale:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+
+
+
+<script>
+  import AOS from 'aos';
+
+  function isBot() {
+    // Added 'lighthouse' to ensure performance audits see the final layout
+    return /bot|crawl|spider|slurp|bing|google|yandex|duckduck|lighthouse/i.test(
+      navigator.userAgent
+    );
+  }
+
+  function aosInit() {
+    AOS.init({
+      // 1. Use the built-in disable feature
+      disable: isBot(), 
+      once: false,
+      // 2. Useful for Astro's dynamic nature
+      disableMutationObserver: false, 
+      // 3. Optional: Add a slight offset so they don't trigger too early
+      offset: 120,
+    });
+
+    // Manually refresh to catch any new elements after an Astro swap
+    AOS.refresh();
+  }
+
+  // Run on initial load
+  aosInit();
+
+  // Run after Astro view transitions
+  document.addEventListener("astro:after-swap", aosInit);
+</script>
+
+
+<script>
+  import Lenis from 'lenis';
+  const lenis = new Lenis({
+    lerp: 0.1,
+    smoothWheel: true,
+    smoothTouch: true, 
+    touchMultiplier: 2,  
+    scrollDirection: 'vertical', 
+  });
+
+  function raf(time) {
+    lenis.raf(time); 
+    requestAnimationFrame(raf); 
+  }
+
+  requestAnimationFrame(raf);
+
+  document.addEventListener("astro:after-swap", () => {
+    lenis.update();
+  });
+
+
+</script>
+
+
+	</body>
+</html>
+
+

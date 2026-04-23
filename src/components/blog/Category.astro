@@ -1,0 +1,69 @@
+---
+import { slugify } from "../../lib/utils/slugify";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+const allCategories = posts.flatMap((post) => post.data.categories || []);
+const uniqueCategories = ["All", ...new Set(allCategories)];
+
+// detect active category from URL
+const currentPath = Astro.url.pathname;
+let activeCategory = "all";
+
+const match = currentPath.match(/\/blog\/category\/([^/]+)/);
+if (match) {
+  activeCategory = match[1]; // slug from URL
+}
+---
+
+<style>
+  .category-cat {
+    background: linear-gradient(93.38deg, #05df72 11.99%, #51a2ff 56.11%);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .category-cat .cat-link {
+    color: #000000;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .category-cat .cat-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+
+  .category-nav .cat-link.active {
+    background: #fff !important;
+    color: #2f2164 !important;
+    font-weight: 600;
+  }
+</style>
+
+<ul class="cat category-cat">
+  {uniqueCategories.map((category) => {
+    const slug =
+      category.toLowerCase() === "all"
+        ? "all"
+        : slugify(category);
+    const isActive = activeCategory === slug;
+
+    return (
+      <li class="cat-item">
+        <a
+          class={`cat-link ${isActive ? "active" : ""}`}
+          href={slug === "all" ? "/blog/" : `/blog/category/${slug}/`}
+        >
+          {category}
+        </a>
+      </li>
+    );
+  })}
+</ul>

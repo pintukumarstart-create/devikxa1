@@ -1,0 +1,132 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import Post from "../../../components/blog/Post.astro";
+import { sortByDate } from "../../../lib/utils/sortFunctions";
+import { slugify } from "../../../lib/utils/slugify";
+import Footer from "../../../components/Footer.astro";
+import Category from "../../../components/blog/Category.astro";
+import { Icon } from "astro-icon/components";
+
+// ✅ Generate static paths for each unique category
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  const categories = [
+    ...new Set(
+      posts.flatMap((post) =>
+        Array.isArray(post.data.categories) ? post.data.categories : []
+      )
+    ),
+  ];
+
+  return categories
+    .filter((category): category is string => typeof category === "string")
+    .map((category) => ({
+      params: { category: slugify(category) },
+      props: { categorySlug: slugify(category), originalCategory: category },
+    }));
+}
+
+const { categorySlug, originalCategory } = Astro.props;
+
+// ✅ Get and filter posts
+const posts = await getCollection("blog");
+const sortedPosts = sortByDate(posts);
+
+const filteredPosts = sortedPosts.filter((post) => {
+  const postCategories = Array.isArray(post.data.categories)
+    ? post.data.categories.map((c: any) =>
+        typeof c === "string" ? slugify(c) : ""
+      )
+    : [];
+
+  return postCategories.includes(categorySlug);
+});
+
+const title = `Discover Latest Blog Post on ${originalCategory}`;
+const description = `DevikXa. A Digital Marketing Company in India That Speaks Your Customer’s Language on ${originalCategory}`;
+
+---
+
+<Layout title={title} description={description}>
+
+
+  <section
+    id="home"
+    class="bg-linear-to-r from-green-400 to-blue-400 text-gray-900 pt-52 pb-10"
+  >
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-8">
+        <!-- Content -->
+        <div class="lg:col-span-8 hero-content">
+          <h1 class="hero-title">
+            Discover Latest Blog Post on {originalCategory}
+          </h1>
+          <p class="hero-subtitle">
+          DevikXa, A Digital Marketing Company in India That Speaks Your Customer’s Language.
+          </p>
+        </div>
+
+        <!-- Icon -->
+        <div class="lg:col-span-4 text-center">
+          <div class="text-[15rem] text-white/10">
+            <Icon name="mdi:book-outline" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section id="blogs" class="py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Header Row -->
+      <div class="w-full">
+        <div class="max-w-7xl mx-auto mb-4">
+          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-4">
+            <!-- Left Column: Category -->
+            <div class="md:col-span-8">
+              <Category />
+            </div>
+
+            <!-- Right Column: Search Bar -->
+            <div class="md:col-span-4 flex justify-end">
+              <div class="search-box w-[300px]">
+                <label for="search-toggle" class="search-btn">
+                  <Icon name="mdi:search" class="text-3xl" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="blogContainer"
+        >
+          {
+            filteredPosts.length > 0 ? (
+              filteredPosts.map((post) => (
+                <div class="fade-in">
+                  <Post post={post} />
+                </div>
+              ))
+            ) : (
+              <p>No posts found in this category.</p>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+  <div>
+    <a class="move-top" href="#" onClick="window.scrollToTop()">
+      <i class="fa-solid fa-caret-up"></i>
+    </a>
+  </div>
+</Layout>

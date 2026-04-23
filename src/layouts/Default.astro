@@ -1,0 +1,31 @@
+---
+const { data } = Astro.props;
+const { Content } = await data.render();
+import Footer from '../components/Footer.astro';
+
+---
+<style>
+  .defaultcss{
+    background-image: none;
+  }
+ li{
+color: #1119;
+  }
+</style>
+       
+
+       <section class="sm:mt-12 lg:mt-16 mt-16 px-4 sm:px-6 lg:px-8">
+        <div class="my-10 mx-auto max-w-8xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8">
+
+          <Content />
+
+        </div>
+    </section>
+
+
+
+
+
+
+<Footer />
+

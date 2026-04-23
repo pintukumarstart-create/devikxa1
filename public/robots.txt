@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /thankyou/
+
+
+Sitemap: https://www.devikxa.com/sitemap.xml

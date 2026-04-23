@@ -1,0 +1,531 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+import Footer from '../../components/Footer.astro';
+import ScrollTop from '../../components/ScrollTop.astro';
+
+const servicePages = await getCollection('servicepage');
+---
+
+<Layout title="Digital Marketing Services | DevikXa" description="Comprehensive digital marketing services in India - SEO, PPC, Social Media Marketing, Content Marketing & more">
+  <main class="pt-20 ">
+
+
+
+     <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 bg-linear-to-br from-blue-50 via-white to-green-50">
+      <!-- Background decorative elements -->
+      <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-linear-to-bl from-blue-100 to-transparent rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-50"></div>
+      <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-linear-to-tr from-green-100 to-transparent rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl opacity-50"></div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <span class="inline-flex items-center px-4 py-2 rounded-full bg-linear-to-r from-blue-100 to-green-100 text-blue-600 font-semibold text-sm mb-6" data-aos-duration="900" data-aos="zoom-in-up">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            India's Leading Digital Marketing Agency
+          </span>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight" data-aos-duration="900" data-aos="zoom-in-up">
+            Transform Your
+            <span class="bg-linear-to-r from-blue-600 to-green-500 bg-clip-text text-transparent"> Digital Presence</span>
+            With Our Expert Services
+          </h1>
+          
+          <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto" data-aos-duration="900" data-aos="zoom-in-up">
+            Comprehensive digital marketing solutions designed to boost your online visibility, drive qualified leads, and accelerate business growth across all digital channels.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#contactForm" class="group relative px-8 py-4 bg-linear-to-r from-blue-600 to-green-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden" data-aos-duration="900" data-aos="zoom-in-up">
+              <span class="relative z-10">Get Free Consultation</span>
+              <div class="absolute inset-0 bg-linear-to-r from-blue-700 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </a>
+            <a href="tel:+919507925579" class="px-8 py-4 bg-white text-gray-800 font-semibold rounded-xl border-2 border-blue-500 hover:border-blue-600 shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2" data-aos-duration="900" data-aos="zoom-in-up">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call Now: +91-9507925579
+            </a>
+          </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+          <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center" data-aos-duration="900" data-aos="zoom-in-up">
+            <div class="text-3xl font-bold bg-linear-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">500+</div>
+            <div class="text-gray-600 mt-2">Happy Clients</div>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center" data-aos-duration="900" data-aos="zoom-in-up">
+            <div class="text-3xl font-bold bg-linear-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">95%</div>
+            <div class="text-gray-600 mt-2">Client Retention</div>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center" data-aos-duration="900" data-aos="zoom-in-up">
+            <div class="text-3xl font-bold bg-linear-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">24/7</div>
+            <div class="text-gray-600 mt-2">Support</div>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center" data-aos-duration="900" data-aos="zoom-in-up">
+            <div class="text-3xl font-bold bg-linear-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">50+</div>
+            <div class="text-gray-600 mt-2">Projects</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Services Grid -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Our Comprehensive
+            <span class="bg-linear-to-r from-blue-600 to-green-500 bg-clip-text text-transparent"> Digital Services</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            End-to-end digital marketing solutions tailored to your business goals and industry requirements
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {servicePages.map((service, index) => {
+            const delay = (index % 3) * 100;
+            return (
+              <a 
+                href={`/services/${service.slug}/`} 
+                class="group block"
+                data-aos="fade-up"
+                data-aos-delay={delay}
+                data-aos-duration="900"
+              >
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl h-full">
+                  {/* Service Header */}
+                  <div class="relative h-48 overflow-hidden">
+                    <div class="absolute inset-0 bg-linear-to-br from-blue-500 to-green-400 opacity-90"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                      <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                        </svg>
+                        View Service
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Service Content */}
+                  <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                      <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                        {service.data.title}
+                      </h3>
+                      <span class="text-blue-600 group-hover:translate-x-2 transition-transform duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4 line-clamp-2">
+                      {service.data.description}
+                    </p>
+
+                    {/* Features Preview */}
+                    <div class="space-y-2 mb-6">
+                      {service.data.features?.slice(0, 3).map((feature) => (
+                        <div class="flex items-center text-gray-700">
+                          <svg class="w-5 h-5 text-green-500 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                          </svg>
+                          <span class="text-sm">{feature.title}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Tags */}
+                    <div class="flex flex-wrap gap-2">
+                      {service.data.services?.slice(0, 3).map((s, i) => (
+                        <span class={`px-3 py-1 rounded-full text-xs font-medium ${i === 0 ? 'bg-blue-100 text-blue-700' : i === 1 ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}>
+                          {s.title}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Footer */}
+                </div>
+              </a>
+            );
+          })}
+        </div>
+
+        {/* CTA Below Services */}
+        <div class="mt-16 text-center">
+          <p class="text-xl text-gray-600 mb-8">Can't find what you're looking for?</p>
+          <a href="/contact-us" class="inline-flex items-center px-8 py-4 bg-linear-to-r from-blue-600 to-green-500 text-white font-semibold rounded-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 group">
+            Request Custom Solution
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+     <!-- Process Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Our Proven
+            <span class="bg-linear-to-r from-blue-600 to-green-500 bg-clip-text text-transparent"> 4-Step Process</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            A systematic approach to ensure your digital marketing success
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 mx-auto bg-linear-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                1
+              </div>
+              
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Discovery & Analysis</h3>
+            <p class="text-gray-600">In-depth analysis of your business, competitors, and target audience</p>
+          </div>
+
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 mx-auto bg-linear-to-br from-blue-400 to-green-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                2
+              </div>
+             
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Strategy Development</h3>
+            <p class="text-gray-600">Customized digital marketing strategy aligned with your goals</p>
+          </div>
+
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 mx-auto bg-linear-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                3
+              </div>
+            
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
+            <p class="text-gray-600">Execution of campaigns across selected digital channels</p>
+          </div>
+
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 mx-auto bg-linear-to-br from-green-600 to-blue-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                4
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Optimization & Reporting</h3>
+            <p class="text-gray-600">Continuous optimization and transparent performance reporting</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-linear-to-br from-blue-50 via-white to-green-50">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Why Choose
+              <span class="bg-linear-to-r from-blue-600 to-green-500 bg-clip-text text-transparent"> DevikXa?</span>
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+              We're not just another digital marketing agency. We're your strategic partner in growth.
+            </p>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="shrink-0 mr-4">
+                  <div class="w-12 h-12 bg-linear-to-r from-blue-100 to-green-100 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Fast Results</h3>
+                  <p class="text-gray-600">We focus on delivering measurable results within the first 90 days</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="hrink-0 mr-4">
+                  <div class="w-12 h-12 bg-linear-to-r from-blue-100 to-green-100 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Transparent Reporting</h3>
+                  <p class="text-gray-600">Real-time dashboards and detailed monthly reports</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="shrink-0 mr-4">
+                  <div class="w-12 h-12 bg-linear-to-r from-blue-100 to-green-100 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Dedicated Team</h3>
+                  <p class="text-gray-600">Get your own dedicated account manager and expert team</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+              <div class="bg-linear-to-r from-blue-600 to-green-500 p-8 text-white">
+                <h3 class="text-2xl font-bold mb-4">Get Your Free Digital Audit</h3>
+                <p class="opacity-90">Discover opportunities for improvement with our comprehensive analysis</p>
+              </div>
+              <div class="p-8">
+                <form id="contactForm" class="space-y-6" action="/api/send-email.php" method="POST">
+                <input type="hidden" name="token" value="jFS6xMOTtD1tKcXSAFlyeazyGzBLWuyjWyFXy4GaoaKQUCVKV7cRfIE630PeerWr">
+
+                  <div>
+                    <label class="block text-gray-700 mb-2">Name *</label>
+                    <input type="text" id="name" name="name" class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" placeholder="Your Name" required>
+                    <span class="text-red-500 text-sm name-error hidden"></span>
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 mb-2">Email *</label>
+                    <input type="email" id="email" name="email" class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" placeholder="your@email.com" required>
+                    <span class="text-red-500 text-sm email-error hidden"></span>
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 mb-2">Phone *</label>
+                    <input type="number" maxlength="10" name="mobile" id="mobile" class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" placeholder="+91 1234567890" required>
+                    <span class="text-red-500 text-sm mobile-error hidden"></span>
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 mb-2">Your Website</label>
+                    <input type="url" id="websitename" name="websitename" class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" placeholder="https://example.com">
+                  </div>
+
+
+                  <div>
+              <label for="message" class="block text-sm font-medium text-gray-600">Message *</label>
+              <textarea id="message" name="message" rows="4" class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" placeholder="Enter Message" required></textarea>
+              <span class="text-red-500 text-sm message-error hidden"></span>
+            </div>
+
+
+
+                  <button type="submit" class="w-full bg-linear-to-r from-blue-600 to-green-500 text-white font-semibold py-4 rounded-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    Get Free Audit Report
+                  </button>
+                </form>
+                <p class="text-sm text-gray-500 mt-4 text-center">
+                  We'll send your custom audit report within 24 hours
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Trusted by
+            <span class="bg-linear-to-r from-blue-600 to-green-500 bg-clip-text text-transparent"> Industry Leaders</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            See what our clients have to say about working with DevikXa
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-200 hover:border-blue-300 transition-all duration-300" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-linear-to-r from-blue-500 to-green-400 rounded-full"></div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">Rajesh Kumar</h4>
+                <p class="text-sm text-gray-600">CEO, TechStart Inc.</p>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "DevikXa transformed our online presence. Our organic traffic increased by 300% in just 6 months!"
+            </p>
+            <div class="flex text-yellow-400">
+              {"★".repeat(5)}
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-200 hover:border-blue-300 transition-all duration-300" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-linear-to-r from-green-500 to-blue-400 rounded-full"></div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">Priya Sharma</h4>
+                <p class="text-sm text-gray-600">Marketing Head, FashionHub</p>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "The social media campaigns they created tripled our engagement and doubled our sales."
+            </p>
+            <div class="flex text-yellow-400">
+              {"★".repeat(5)}
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-200 hover:border-blue-300 transition-all duration-300" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-linear-to-r from-blue-600 to-green-500 rounded-full"></div>
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">Amit Patel</h4>
+                <p class="text-sm text-gray-600">Founder, HealthCare Plus</p>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "Best ROI we've ever gotten from digital marketing. Their team is professional and results-driven."
+            </p>
+            <div class="flex text-yellow-400">
+              {"★".repeat(5)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-linear-to-r from-blue-600 to-green-500">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Accelerate Your Business Growth?
+          </h2>
+          <p class="text-xl opacity-90 mb-10">
+            Join 500+ successful businesses that trust DevikXa with their digital marketing
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a href="/contact-us" class="group bg-white text-blue-600 font-bold px-10 py-4 rounded-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 flex items-center">
+              Start Your Project
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+            <a href="tel:+919507925579" class="group bg-transparent border-2 border-white text-white font-bold px-10 py-4 rounded-xl hover:bg-white/10 transform hover:-translate-y-2 transition-all duration-300 flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Schedule a Call
+            </a>
+          </div>
+          <p class="text-sm opacity-75 mt-8">
+            ⚡ Get response within 30 minutes | 📞 24/7 Support Available
+          </p>
+        </div>
+      </div>
+    </section>
+
+   <section class="py-10 sm:py-16 lg:py-14">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-2xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-3xl capitalize" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+                Explore Common Questions
+            </h2>
+        </div>
+        <div class="mx-auto mt-8 space-y-4 md:mt-16">
+
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+                <button type="button" id="question1" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-gray-800">What are the digital marketing services at DevikXa?</span>
+                    <Icon name="line-md:arrow-down-circle" class="h-12 w-12 text-gray-700 transition-transform transform rotate-0 faq-icon" id="arrow1" />
+                </button>
+                <div id="answer1" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-800">
+                    <p>We offer various digital marketing services ranging from SEO, PPC, and web design to social media marketing-for the growth of your online existence.</p>
+                </div>
+            </div>
+
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                <button type="button" id="question2" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-gray-800">When do results that I can observe start showing in SEO?</span>
+                    <Icon name="line-md:arrow-down-circle" class="h-12 w-12 text-gray-700 transition-transform transform rotate-0 faq-icon" id="arrow2" />
+                </button>
+                <div id="answer2" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-800">
+                    <p>SEO stands as a long-term approach. You may expect to notice some effect for your web presence in about 3-6 months.</p>
+                </div>
+            </div>
+
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                <button type="button" id="question3" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-gray-800">Can DevikXa design a custom website for my business?</span>
+                    <Icon name="line-md:arrow-down-circle" class="h-12 w-12 text-gray-700 transition-transform transform rotate-0 faq-icon" id="arrow3" />
+                </button>
+                <div id="answer3" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-800">
+                    <p>Yes, our design and development process of websites is parceled into fully customized, responsive-to-the-brand-and-business-goals.</p>
+                </div>
+            </div>
+
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1400">
+                <button type="button" id="question4" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-gray-800">Is PPC advertising effective for a small business?</span>
+                    <Icon name="line-md:arrow-down-circle" class="h-12 w-12 text-gray-700 transition-transform transform rotate-0 faq-icon" id="arrow4" />
+                </button>
+                <div id="answer4" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-800">
+                    <p>Absolutely! Our targeted PPC campaign works well to help small business owners find their way to the right market and generate quality leads swiftly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script is:inline>
+        // JavaScript to toggle the answers and rotate the arrows
+        document.querySelectorAll('[id^="question"]').forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                var answer = document.getElementById('answer' + (index + 1));
+                var arrow = document.getElementById('arrow' + (index + 1));
+
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.display = 'none';
+                    arrow.style.transform = 'rotate(-180deg)';
+                }
+            });
+        });
+    </script>
+</section>
+
+  </main>
+
+
+
+<ScrollTop />
+ <Footer />
+</Layout>

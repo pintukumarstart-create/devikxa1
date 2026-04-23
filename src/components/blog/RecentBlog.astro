@@ -1,0 +1,100 @@
+---
+import { getCollection } from "astro:content";
+import dateFormat from "../../lib/utils/dateFormat";
+
+const allPosts = await getCollection("blog");
+const recentPosts = allPosts.filter(p => p.slug !== "-index").sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()).slice(0, 6);
+---
+
+<style>
+     .sidebar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .sidebar-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+.recent-post:last-child{
+    padding:20px;
+}
+        .recent-post {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+              border-bottom: 1px solid #eee !important;
+        }
+
+        .recent-post:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .recent-post-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .recent-post-content h6 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+            line-height: 1.4;
+              text-decoration: none;
+        }
+
+        .recent-post-date {
+            font-size: 0.8rem;
+            color: #666;
+        }
+.recent-link{
+    text-decoration: none;
+
+}
+</style>
+
+
+<div class="sidebar-section">
+    <h4 class="sidebar-title">Recent Posts</h4>
+    {recentPosts.map(recentPost => (
+        <a class="recent-link" href={`/blog/${recentPost.slug}/`}>
+        <div class="recent-post">
+            <div class="recent-post-image">
+                <img src={recentPost.data.image} alt="" />
+                </div>
+            <div class="recent-post-content">
+                <h6>{recentPost.data.title}</h6>
+                <div class="recent-post-date">{dateFormat(recentPost.data.date)}</div>
+            </div>
+        </div>
+        </a>
+    ))}
+</div>
+

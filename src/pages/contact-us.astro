@@ -1,0 +1,417 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+import Footer from '../components/Footer.astro';
+import ScrollTop from '../components/ScrollTop.astro';
+
+const title = "Contact Us | DevikXa";
+const description = "Contact us for the best affordable web desing and development digital marketing services";
+---
+
+<Layout title={title} description={description}>
+
+    <!-- Hero Section -->
+    <section class="bg-linear-to-r from-blue-400 to-green-400 pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute top-10 right-10 w-64 h-64 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div class="absolute bottom-10 left-10 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+
+        <div class="container mx-auto px-6 z-10">
+            <div class="text-center max-w-4xl mx-auto" data-aos="fade-up">
+                <h1 class="hero-title text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">
+                    Get In Touch
+                </h1>
+                <p class="text-gray-800 text-xl md:text-2xl mb-8 font-medium">
+                  Do you want to know about us ? Contact with us from our executives. We are available to guide you and clear any of your doubts about DevikXa service.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+      <!-- Contact Methods -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Phone -->
+                <div class="contact-card bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Icon name="line-md:phone-call-loop" class="h-10 w-10 text-3xl rounded-full transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Call Us</h3>
+                    <p class="text-gray-800 mb-2">We're available 10 AM - 5 PM, Monday to Saturday</p>
+                    <a href="tel:+919876543210" class="text-gray-700 font-bold text-lg hover:text-gray-900 transition-colors">+91 98765 43210</a>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-card bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Icon name="line-md:email" class="h-10 w-10 text-3xl rounded-full transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Email Us</h3>
+                    <p class="text-gray-800 mb-2">Send us an email anytime for inquiries</p>
+                    <a href="mailto:info@devikxa.com" class="text-gray-700 font-bold text-lg hover:text-gray-900 transition-colors">info@devikxa.com</a>
+                </div>
+
+                <!-- Visit -->
+                <div class="contact-card bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                       <Icon name="line-md:map-marker-alt-loop" class="h-10 w-10 text-3xl rounded-full transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Visit Us</h3>
+                    <p class="text-gray-800 mb-2">If You have any projects regarding you business</p>
+                    <p class="text-gray-700 font-bold">Sodala, Jaipur Rajasthan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+ <section class="sm:mt-12 lg:mt-16 mt-16 px-4 sm:px-6 lg:px-8">
+
+        <div
+            class="my-10 mx-auto max-w-8xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
+            
+    
+            <!--   Image Section     -->
+            <div class="lg:inset-y-0 lg:right-0 lg:w-1/2 w-full" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+                <div class="bg-linear-to-r from-blue-400 to-green-400 px-4 py-4 rounded-t-lg">
+                    <h3 class="text-3xl font-semibold text-gray-900 text-center justify-centre">Get In Touch With Us</h3>
+                </div>
+               <form id="contactForm" class="space-y-4 p-6 bg-white shadow-lg rounded-lg">
+      <input type="text" name="website_url" style="display:none !important" tabindex="-1" autocomplete="off">
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-600">Full Name *</label>
+    <input type="text" id="name" name="name" placeholder="Enter Full Name" class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" required>
+    <span class="text-red-500 text-sm name-error hidden"></span>
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-600">Email Address *</label>
+    <input type="email" id="email" name="email" placeholder="Enter Email Id." class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" required>
+    <span class="text-red-500 text-sm email-error hidden"></span>
+  </div>
+
+  <div>
+    <label for="number" class="block text-sm font-medium text-gray-600">Phone Number *</label>
+    <input type="tel" id="mobile"  placeholder="Enter Mobile No." maxlength="10" name="mobile" class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" required>
+    <span class="text-red-500 text-sm mobile-error hidden"></span>
+  </div>
+
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-600">Your website (Optional)</label>
+    <input type="url" id="website" name="website" class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" placeholder="enter your website url eg:- https://www.example.com">
+  </div>
+
+ 
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-600">Message *</label>
+    <textarea id="message" name="message" rows="4" class="mt-2 block w-full p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-100" placeholder="Enter Message" required></textarea>  
+    <span class="text-red-500 text-sm message-error hidden"></span>
+  </div>
+
+  <div>
+    <button type="submit" id="submitBtn" class="bg-linear-to-r from-blue-800 to-green-800 w-full flex items-center justify-center px-8 py-3 text-base leading-6 font-medium text-white md:py-4 md:px-10 hover:from-blue-700 hover:to-green-700 rounded">
+      SUBMIT
+    </button>
+  </div>
+
+   <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Sending...</p>
+            </div>
+            
+            <div class="message" id="responseMessage"></div>
+
+</form>
+
+            </div>
+
+
+           <div class="sm:text-center lg:text-right">
+
+            </div>
+
+            
+            <!-- Contact Information -->
+<div
+  class="order-1 w-full px-4 lg:order-2 lg:w-1/2 xl:w-6/12"
+>
+  <div class="mb-12 px-5 pt-3 sm:max-w-[570px] lg:mb-0">
+    <h2
+      class="mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]"
+    >
+      Contact Us
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+
+      <!-- Support -->
+      <div
+        class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-6 rounded-xl shadow-md border-l-4 border-green-400 hover:border-l-8 hover:shadow-lg transform transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        <div
+          class="absolute inset-0 bg-linear-to-r from-green-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"
+        ></div>
+
+        <div
+          class="relative z-10 flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left"
+        >
+          <div
+            class="bg-green-100 text-secondary-600 p-3 rounded-lg group-hover:scale-110 transition-all duration-300 group-hover:text-white group-hover:bg-linear-to-r from-blue-400 to-green-400"
+          >
+          <Icon name="line-md:phone-call-loop" class="text-3xl transition-colors duration-300 group-hover:text-white" />
+          </div>
+
+          <div
+            class="mt-3 sm:mt-0 sm:ml-4 transition-colors duration-300 group-hover:text-white"
+          >
+            <h3
+              class="font-bold text-lg mb-1 transition-colors duration-300 group-hover:text-white"
+            >
+              Support
+            </h3>
+            <p class="mb-1 transition-colors duration-300 group-hover:text-white">
+              support@devikxa.com
+            </p>
+            <p class="transition-colors duration-300 group-hover:text-white">
+              +91-95079 25579
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support -->
+      <div
+        class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-6 rounded-xl shadow-md border-l-4 border-green-400 hover:border-l-8 hover:shadow-lg transform transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        <div
+          class="absolute inset-0 bg-linear-to-r from-green-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"
+        ></div>
+
+        <div
+          class="relative z-10 flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left"
+        >
+          <div
+            class="bg-green-100 text-secondary-600 p-3 rounded-lg group-hover:scale-110 transition-all duration-300 group-hover:text-white group-hover:bg-linear-to-r from-blue-400 to-green-400"
+          >
+          <Icon name="line-md:phone-call-loop" class="text-3xl transition-colors duration-300 group-hover:text-white" />
+          </div>
+
+          <div
+            class="mt-3 sm:mt-0 sm:ml-4 transition-colors duration-300 group-hover:text-white"
+          >
+            <h3
+              class="font-bold text-lg mb-1 transition-colors duration-300 group-hover:text-white"
+            >
+              Sales
+            </h3>
+            <p class="mb-1 transition-colors duration-300 group-hover:text-white">
+              sales@devikxa.com
+            </p>
+            <p class="transition-colors duration-300 group-hover:text-white">
+              +91-95079 25579
+            </p>
+          </div>
+        </div>
+      </div>
+
+       <!-- Support -->
+      <div
+        class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-6 rounded-xl shadow-md border-l-4 border-green-400 hover:border-l-8 hover:shadow-lg transform transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        <div
+          class="absolute inset-0 bg-linear-to-r from-green-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"
+        ></div>
+
+        <div
+          class="relative z-10 flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left"
+        >
+          <div
+            class="bg-green-100 text-secondary-600 p-3 rounded-lg group-hover:scale-110 transition-all duration-300 group-hover:text-white group-hover:bg-linear-to-r from-blue-400 to-green-400"
+          >
+          <Icon name="line-md:phone-call-loop" class="text-3xl transition-colors duration-300 group-hover:text-white" />
+          </div>
+
+          <div
+            class="mt-3 sm:mt-0 sm:ml-4 transition-colors duration-300 group-hover:text-white"
+          >
+            <h3
+              class="font-bold text-lg mb-1 transition-colors duration-300 group-hover:text-white"
+            >
+              Information
+            </h3>
+            <p class="mb-1 transition-colors duration-300 group-hover:text-white">
+              info@devikxa.com
+            </p>
+            <p class="transition-colors duration-300 group-hover:text-white">
+              +91-95079 25579
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+        </div>
+    
+    </section>
+
+
+
+
+
+
+
+<ScrollTop />
+ <Footer />
+
+
+ <script is:inline>
+    // REPLACE WITH YOUR GOOGLE APPS SCRIPT URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxGuKeNC-KwW5n7J-UA_1kxwgLZKY_JRnJu7idNr2OpK_dhlqqwRZlBVS3-oB8uu-GlXw/exec';
+    
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const loading = document.getElementById('loading');
+    const responseMessage = document.getElementById('responseMessage');
+    
+    // Validation functions
+    const validators = {
+    name: (value) => {
+        if (!value || value.length < 2) return 'Name must be at least 2 characters';
+        if (value.length > 100) return 'Name too long';
+        if (!/^[a-zA-Z\s\-'\.]+$/.test(value)) return 'Name contains invalid characters';
+        return null;
+    },
+    
+    email: (value) => {
+        if (!value) return 'Email is required';
+        if (!/^\S+@\S+\.\S+$/.test(value)) return 'Invalid email format';
+        return null;
+    },
+    
+    mobile: (value) => {
+        if (!value) return 'Mobile number is required';
+        if (!/^[0-9+\-\s()]{10,15}$/.test(value)) return 'Invalid mobile number';
+        return null;
+    },
+    
+    message: (value) => {
+        if (!value) return 'Message is required';
+        if (value.length < 10) return 'Message must be at least 10 characters';
+        return null;
+    },
+    
+};
+    
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Hide previous messages
+        responseMessage.className = 'message';
+        responseMessage.style.display = 'none';
+        
+        // Honeypot check
+        const honeypot = form.querySelector('input[name="website_url"]');
+        if (honeypot.value) {
+            showMessage('success', 'Message sent successfully!');
+            form.reset();
+            return;
+        }
+        
+        // Get form data
+        const formData = {
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            mobile: form.mobile.value.trim(),
+            website: form.website.value.trim() || 'Not provided',
+            message: form.message.value.trim()
+        };
+        
+        // Validate all fields
+        for (const [field, value] of Object.entries(formData)) {
+            if (validators[field]) {
+                const error = validators[field](value);
+                if (error) {
+                    showMessage('error', error);
+                    document.getElementById(field).focus();
+                    return;
+                }
+            }
+        }
+        
+        // Disable form and show loading
+        submitBtn.disabled = true;
+        loading.classList.add('show');
+        
+        try {
+            // Create URL-encoded form data (THIS IS THE FIX)
+            const urlEncodedData = new URLSearchParams();
+            urlEncodedData.append('name', formData.name);
+            urlEncodedData.append('email', formData.email);
+            urlEncodedData.append('mobile', formData.mobile);
+            urlEncodedData.append('website', formData.website);
+            urlEncodedData.append('message', formData.message);
+            
+            // Send to Google Sheets using form-urlencoded
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: urlEncodedData.toString()
+            });
+            
+            // With no-cors, we can't read response, assume success
+            showMessage('success', 'Thank you! Your message has been sent successfully.');
+            form.reset();
+            
+        } catch (error) {
+            console.error('Error:', error);
+            showMessage('error', 'Sorry, there was an error. Please try again.');
+        } finally {
+            submitBtn.disabled = false;
+            loading.classList.remove('show');
+        }
+    });
+    
+    function showMessage(type, text) {
+        responseMessage.className = `message ${type}`;
+        responseMessage.textContent = text;
+        responseMessage.style.display = 'block';
+        
+        if (type === 'success') {
+            setTimeout(() => {
+                responseMessage.style.display = 'none';
+            }, 5000);
+        }
+    }
+    
+    // Real-time validation
+    ['name', 'email', 'mobile', 'message', 'website'].forEach(field => {
+        const element = document.getElementById(field);
+        if (element) {
+            element.addEventListener('blur', function() {
+                const error = validators[field](this.value.trim());
+                this.style.borderColor = error ? '#dc3545' : '#28a745';
+            });
+            
+            element.addEventListener('input', function() {
+                this.style.borderColor = '#ddd';
+            });
+        }
+    });
+    </script>
+</Layout>

@@ -1,0 +1,114 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import Post from "../../../components/blog/Post.astro";
+import Pagination from "../../../components/blog/Pagination.astro";
+import { sortByDate } from "../../../lib/utils/sortFunctions";
+import Category from '../../../components/blog/Category.astro'
+import Footer from '../../../components/Footer.astro';
+import { Icon } from "astro-icon/components";
+
+
+export async function getStaticPaths({ paginate }) {
+  const posts = await getCollection("blog");
+  const filteredPosts = posts.filter(post => post.slug !== "-index");
+  const sortedPosts = sortByDate(filteredPosts);
+  return paginate(sortedPosts, { pageSize: 9 });
+}
+
+const { page } = Astro.props;
+
+
+const title = "Web Design, Web Development and Digital Marketing Blog";
+const description = "Web Design, Web Development and Digital Marketing Blog";
+
+---
+
+<Layout title={title} description={description}>
+
+
+
+<section id="home" class="bg-linear-to-r from-green-400 to-blue-400 text-gray-900 pt-20 sm:pt-24 lg:pt-52 pb-16 sm:pb-24 lg:pb-77">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-8">
+            
+            <!-- Content -->
+            <div class="lg:col-span-8 hero-content">
+                <h1 class="hero-title">Latest Blog Post From Devikxa</h1>
+                <p class="hero-subtitle">
+                    We have Listed blog post on Web desing, web development and digital marketing 
+                </p>
+            </div>
+
+            <!-- Icon -->
+            <div class="lg:col-span-4 text-center">
+                <div class="text-[15rem] text-white/10">
+                  <Icon name="mdi:book-outline" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Main Content -->
+<section id="blogs" class="py-12">
+    <div class="max-w-7xl mx-auto px-4">
+        
+        <!-- Header Row -->
+        <div class="w-full">
+            <div class="max-w-7xl mx-auto mb-4">
+                <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-4">
+                    
+                    <!-- Left Column: Category -->
+                    <div class="md:col-span-8">
+                        <Category />
+                    </div>
+
+                    <!-- Right Column: Search Bar -->
+                    <div class="md:col-span-4 flex justify-end">
+                        <div class="search-box w-[300px]">
+                            <label for="search-toggle" class="search-btn">
+                                <Icon name="mdi:search" class="text-3xl"/>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+   
+
+            <!-- Blog Posts Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="blogContainer">
+                {page.data.map((post) => (
+                    <div class="fade-in">
+                        <Post post={post} />
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <Pagination
+            totalPages={page.lastPage}
+            currentPage={page.currentPage}
+        />
+
+    </div>
+</section>
+
+
+
+
+<Footer/>
+
+   
+
+         <div>
+    <a class="move-top" href="#" onClick="window.scrollToTop()"><i class="fa-solid fa-caret-up"></i></a>
+  </div>
+</Layout>

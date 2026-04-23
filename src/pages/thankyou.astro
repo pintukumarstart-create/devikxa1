@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+import Footer from '../components/Footer.astro';
+import ScrollTop from '../components/ScrollTop.astro';
+
+const title = "Thankyou you form has been submitted | DevikXa";
+const description = "Thankyou you form has been submitted";
+---
+
+<Layout title={title} description={description}>
+
+ <style>
+    .checkmark__circle {
+      stroke-dasharray: 166; 
+      stroke-dashoffset: 166;
+      stroke-width: 2;
+      stroke: #000000;
+      fill: none;
+      animation: stroke 1.5s cubic-bezier(0.4, 0, 0, 1) forwards;
+    }
+
+    .checkmark__check {
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      stroke-width: 2;
+      stroke: #000000;
+      fill: none;
+      animation: stroke 1.5s cubic-bezier(0.4, 0, 0, 1) forwards;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes stroke {
+      0% {
+        stroke-dashoffset: 100%;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+
+<div class="flex items-center justify-center h-screen ">
+      <div class="p-1 rounded shadow-lg bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200">
+        <img src="/images/logo.png" alt="Devikxa logo" class="mx-auto  h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain mb-6">
+        <div class="flex flex-col items-center p-4 space-y-2 ">
+          <div class="w-20 h-20 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
+      <svg class="checkmark w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+      </svg>
+    </div>
+          <h1 class="font-bold text-4xl from-blue-600 via-green-600 to-blue-600 bg-linear-to-r bg-clip-text text-transparent">Thank You Form submitted successfully!</h1>
+          
+          <p>We will reply to you soon!</p>
+          <a href="/"
+            class="inline-flex items-center px-4 py-4 text-base leading-6 font-medium bg-transparent text-blue-700 border-2 border-blue-500  hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 hover:text-white hover:border-transparent transition-all duration-200 ease-in-out transform rounded cursor-pointer">
+           
+            <span class="text-sm font-medium">
+              Back To Home
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+</Layout>

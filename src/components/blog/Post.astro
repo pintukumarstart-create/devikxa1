@@ -1,0 +1,47 @@
+---
+import dateFormat from "../../lib/utils/dateFormat";
+import readingTime from "../../lib/utils/readingTime";
+import { slugify } from "../../lib/utils/slugify";
+import { Icon } from "astro-icon/components";
+
+const { post } = Astro.props;
+const { title, date, image, authors, categories } = post.data;
+---
+<div class="blog-card">
+  <div class="blog-image">
+    {image && (
+      <a href={`/blog/${post.slug}/`}>
+        <img src={image} alt={title} />
+      </a>
+    )}
+
+    <a href={`/blog/${post.slug}/`}>
+      <div class="blog-overlay">
+       <Icon name="mdi:eye" class="text-5xl text-gray-900"/>
+      </div>
+    </a>
+  </div>
+
+  <div class="blog-content">
+    {categories?.map((category: string) => (
+      <a href={`/blog/category/${slugify(category)}/`} class="blog-category-link">
+        <span class="blog-category">{category}</span>
+      </a>
+    ))}
+
+    <h3 class="blog-title">
+      <a href={`/blog/${post.slug}/`}>{title}</a>
+    </h3>
+
+    <div class="blog-meta">
+      <div class="blog-author">
+        <div class="author-avatar bi bi-book"></div>
+        <span>{readingTime(post.body)}</span>
+      </div>
+      <div class="blog-date">
+        <i class="fas fa-calendar-alt"></i>
+        <span>{dateFormat(date)}</span>
+      </div>
+    </div>
+  </div>
+</div>

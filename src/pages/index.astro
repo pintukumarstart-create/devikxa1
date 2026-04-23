@@ -1,0 +1,1158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import ScrollTop from '../components/ScrollTop.astro';
+import { Icon } from 'astro-icon/components'
+
+const title = "DevikXa – Creative Web Design, Development & Digital Marketing Agency";
+const description = "Build a powerful online presence with DevikXa. We specialize in modern web design, custom development, SEO, SMM, and PPC strategies that drive traffic, leads, and sales.";
+
+---
+
+<Layout title={title} description={description}>
+
+
+	
+	<!-- <Header /> -->
+	
+	<section class="relative w-full h-screen overflow-hidden">
+        <!-- Background video -->
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover" >
+          <source src="/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      
+        <!-- Overlay for text readability -->
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+      
+        <!-- Hero content -->
+        <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
+			<main class="px-4 sm:px-6 lg:px-8 z-10">
+			  <div class="text-center">
+				<h1 class="mt-4 w-full text-4xl font-bold tracking-tight text-center  sm:mt-5 sm:text-6xl lg:mt-6  capitalize" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+					<span class="font-bold from-blue-600 via-green-600 to-blue-600 bg-linear-to-r bg-clip-text text-transparent">DevikXa</span> Your Digital Vision to Life </span>
+				</h1>
+				<p class="mt-3 font-medium lg:text-xl text-white sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+				Would you want to elevate your business to the next level? At DevikXa, we are the right people to take you through that process. Our company specializes in creating websites that are both visually stunning and extremely functional. It doesn't matter if you are looking to launch a brand, new site or if you just want to give your marketing campaign a fresh energizing, we are at your service.
+				</p>
+				<div class="mt-5 sm:mt-8 sm:flex justify-center">
+				  <div class="rounded-md shadow" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+					<a href="/contact-us" class="bg-linear-to-r from-blue-800 to-green-800 w-full flex items-center justify-center px-8 py-3 text-base leading-6 font-regular text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none  transition duration-150 ease-in-out md:py-4 md:px-10 hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 rounded">
+					  Get started
+					</a>
+				  </div>
+				  <div class="mt-3 sm:mt-0 sm:ml-3" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+					<a href="tel:+919507925579" class="w-full flex items-center hover:text-white justify-center px-8 py-3  text-base leading-6 font-regular bg-transparent hover:bg-linear-to-r from-blue-800 to-green-800 font-semibold text-gray-100 border border-blue-500 rounded">
+					 Call Now
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</main>
+        </div>
+      </section>
+
+
+  <section class="-mt-20 xsm:-mt-4 sm:mt-0 md:-mt-10 xl:-mt-20 xl1450:-mt-4 z-10 relative pb-8 sm:pb-16 overflow-visible">
+	<div class="container mx-auto z-10 relative">
+		<div class="flex justify-center flex-wrap">
+
+			<div class=" px-2 lg:px-3 mb-4 mt-3 w-1/2 md:w-1/4  ">
+			
+					<div class="bg-linear-to-r from-blue-400 to-green-400 text-gray-900 text-center flex flex-col justify-start items-center mx-auto h-full transition-transform transform hover:scale-105 duration-300 ease-in-out px-3 pt-5 pb-6 sm:m-0 hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] rounded" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+						<img decoding="async" src="/images/img-40.png" alt="UX / UI DESIGN" class="inline-block h-24 mt-3 image" style="">
+						<p class="font-bold mt-6 text-xs sm:text-sm lg:text-lg uppercase">
+							Web Design
+							&nbsp;<span class="text-secondary-color double-caret"></span>
+						</p>
+					</div>
+			
+			</div>
+
+			<div class=" px-2 lg:px-3 mb-4 mt-3 w-1/2 md:w-1/4">
+				
+					<div class="bg-linear-to-r from-blue-400 to-green-400 text-gray-900 text-center flex flex-col justify-start items-center mx-auto h-full transition-transform transform hover:scale-105 duration-300 ease-in-out px-3 pt-5 pb-6 sm:m-0 hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] rounded" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+						<img decoding="async" src="/images/img-27.png" alt="seo service" class="inline-block h-24 mt-3 image" style="">
+						<p class="font-bold mt-6 text-xs sm:text-sm lg:text-lg uppercase">
+						   seo service
+							&nbsp;<span class="text-secondary-color double-caret"></span>
+						</p>
+					</div>
+			
+			</div>
+
+			<div class=" px-2 lg:px-3 mb-4 mt-3 w-1/2 md:w-1/4">
+				
+					<div class="bg-linear-to-r from-blue-400 to-green-400 text-gray-900 text-center flex flex-col justify-start items-center mx-auto h-full shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out px-3 pt-5 pb-6 sm:m-0 hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] rounded" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+						<img decoding="async" src="/images/img-43.png" alt="CMS & Apps Development" class="inline-block h-24 mt-3 image" style="">
+						<p class="font-bold mt-6 text-xs sm:text-sm lg:text-lg uppercase">
+							Web Development
+							&nbsp;<span class="text-secondary-color double-caret"></span>
+						</p>
+					</div>
+			
+			</div>
+
+			<div class=" px-2 lg:px-3 mb-4 mt-3 w-1/2 md:w-1/4 ">
+				
+					<div class="bg-linear-to-r from-blue-400 to-green-400 text-gray-900 text-center flex flex-col justify-start items-center mx-auto h-full transition-transform transform hover:scale-105 duration-300 ease-in-out px-3 pt-5 pb-6 sm:m-0 hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] rounded" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+						<img decoding="async" src="/images/img-72.png" alt="marketing service" class="inline-block h-24 mt-3 image" style="">
+						<p class="font-bold mt-6 text-xs sm:text-sm lg:text-lg uppercase">
+						   Digital Marketing
+							&nbsp;<span class="text-secondary-color double-caret"></span>
+						</p>
+					</div>
+			
+			</div>
+
+		</div>
+	</div>
+  </section>
+
+  
+  
+  <section class="py-8 bg-linear-to-r from-green-400 to-blue-500 shadow-lg">
+	<div class="container mx-auto px-4">
+		<div class="mx-auto">
+			<h2 class="text-3xl font-semibold image text-center mb-8 text-gray-800  capitalize" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">Our Core Digital Marketing Services</h2>
+	
+			<!-- Tabs -->
+<div class="flex flex-wrap space-x-4 mb-8 justify-center">
+  <button id="seoTab" class="tab-btn px-6 py-3 text-xl text-white bg-gray-800 focus:outline-none rounded-xl shadow-xl w-full sm:w-auto mb-2 sm:mb-0 bg-green-600 bg-blue-600 bg-teal-600" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+     Web Design & Development
+  </button>
+  <button id="ppcTab" class="tab-btn px-6 py-3 text-xl text-white bg-gray-800 focus:outline-none rounded-xl shadow-xl w-full sm:w-auto mb-2 sm:mb-0" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+    (SEO)
+  </button>
+  <button id="socialTab" class="tab-btn px-6 py-3 text-xl text-white bg-gray-800 focus:outline-none rounded-xl shadow-xl w-full sm:w-auto mb-2 sm:mb-0" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+    (PPC)
+  </button>
+
+  <button id="smmTab" class="tab-btn px-6 py-3 text-xl text-white bg-gray-800 focus:outline-none rounded-xl shadow-xl w-full sm:w-auto mb-2 sm:mb-0" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+    (SMM)
+  </button>
+
+</div>
+
+	
+			<!-- Tab Content -->
+			<div class="tab-content ">
+	
+				<!-- SEO Tab Content -->
+				<div id="seoContent" class="tab-panel hidden bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)]" data-aos="fade-up" data-aos-delay="500" data-aos-duration="900">
+					<div class="flex flex-col md:flex-row items-center space-y-6 md:space-x-6 md:space-y-0 p-8">
+						<img src="/images/img-18.png" alt="SEO" class=" w-full md:w-1/2 rounded-xl shadow-lg" data-aos="zoom-in-up" data-aos-delay="600" data-aos-duration="900">
+
+						<div class="text-gray-900 w-full md:w-1/2">
+							<h3 class="text-2xl text-gray-900 font-bold mb-4">Web Design & Development</h3>
+							<p class="text-lg text-gray-900">A beautifully designed website goes beyond the surface of the art, it is the first impression of your business. Our custom web design and development services are deeply involved with the customers' experience, the site's performance, and it being phone, friendly to confirm that your website is not only attractive but also it functions well on all gadgets. No matter if you need an e, commerce site, a business website, or a personal blog, we are the ones to offer you:</p>
+							<ul class="list-disc">
+								<li>
+									Custom Website Design: Designs that are unique, attractive, and user, friendly.
+								</li>
+								<li>
+									Responsive Development: Allowing flawless performance on all gadgets.
+								</li>
+								<li>
+									E, commerce Solutions: An e, commerce platform, full of features, that elevates your business.
+								</li>
+
+								<li>
+								Fast Loading Speed: Tailored for performance and a super, fast user experience.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+	
+				<!-- PPC Tab Content -->
+				<div id="ppcContent" class="tab-panel hidden bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)]">
+					<div class="flex flex-col md:flex-row items-center space-y-6 md:space-x-6 md:space-y-0 p-8">
+						<img src="/images/img-14.png" alt="PPC" class=" w-full md:w-1/2 rounded-lg shadow-lg">
+						<div class="text-gray-900 w-full md:w-1/2">
+							<h3 class="text-2xl text-gray-900 font-bold mb-4">Search Engine Optimization (SEO)</h3>
+							<p class="text-lg text-gray-900">Desire to appear on the first page of Google and be visited by more users without having to pay for ads? Absolutely! Our SEO agencies realize this desire at the highest level and through the most effective tactics. They implement a full bouquet of on, site and off, site SEO strategies to bring the client's platform on the first pages of the search engines thus raising the keyword rankings that they have chosen. The SEO services which we offer include:</p>
+                            <ul class="list-disc">
+								<li>
+								On, Page Optimization: Performing keyword research, optimizing content, and linking internally.
+								</li>
+								<li>
+									Technical SEO: Improving site speed, mobile optimization, and adding schema markup.
+								</li>
+								<li>
+								Local SEO: Reach your local community and be easily found on Google Maps.
+								</li>
+
+								<li>
+								Link Building: Obtain backlinks of top quality that will increase your authority.
+								</li>
+							</ul>
+							
+
+
+						</div>
+					</div>
+				</div>
+	
+				<!-- Social Tab Content -->
+				<div id="socialContent" class="tab-panel hidden bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)]">
+					<div class="flex flex-col md:flex-row items-center space-y-6 md:space-x-6 md:space-y-0 p-8">
+						<img src="/images/ppc2.png" alt="Social Media Marketing" class=" w-full md:w-1/2 rounded-lg shadow-lg">
+						<div class="text-gray-900 w-full md:w-1/2">
+							<h3 class="text-2xl text-gray-900 font-bold mb-4">Pay, Per, Click Advertising (PPC)</h3>
+							<p class="text-lg text-gray-900">Use a PPC campaign to great effect to ensure that every single cent of your investment will bring the return of your dreams. Our skilled PPC team creates purposeful ads that attract the targeted traffic, convert the visitors into loyal customers, and provide quantifiable results. The undertakings that we perform include:</p>
+
+                           <ul class="list-disc">
+								<li>
+								Google Ads: Utilize the right keywords to get up at the very top of the search results.
+								</li>
+								<li>
+									Facebook & Instagram Ads: Take your message directly to your customers while they are scrolling.
+								</li>
+								<li>
+								Remarketing Campaigns: Offer anew your products/services to those people who visited your website and are most likely to buy from you.
+								</li>
+							</ul>
+
+
+						</div>
+					</div>
+				</div>
+
+
+					<!-- Social Tab Content -->
+				<div id="smmContent" class="tab-panel hidden bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)]">
+					<div class="flex flex-col md:flex-row items-center space-y-6 md:space-x-6 md:space-y-0 p-8">
+						<img src="images/img-72.png" alt="Social Media Marketing" class=" w-full md:w-1/2 rounded-lg shadow-lg">
+						<div class="text-gray-900 w-full md:w-1/2">
+							<h3 class="text-2xl text-gray-900 font-bold mb-4"> Social Media Marketing & Management</h3>
+							<p class="text-lg text-gray-900">Social media is one of the strongest means to relate with your audience. We develop custom social media plans for you to expand your brand and raise the interaction rate on the different platforms, e.g., Facebook, Instagram, LinkedIn, and Twitter. Our offerings embrace:</p>
+
+                           <ul class="list-disc">
+								<li>
+								Social Media Strategy: Creating unique strategies tailored to the business objectives.
+								</li>
+								<li>
+								Content Creation & Scheduling: Preparing and publishing enticing content to engage the followers.
+								</li>
+								<li>
+								Community Management: Reacting to comments and messages and building relationships.
+								</li>
+							</ul>
+
+
+						</div>
+					</div>
+				</div>
+
+
+	
+			</div>
+	
+		</div>
+	</div>
+  </section>
+
+  <script is:inline>
+	// Simple JavaScript for tab functionality
+	const tabButtons = document.querySelectorAll('.tab-btn');
+	const tabPanels = document.querySelectorAll('.tab-panel');
+
+	tabButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			// Hide all tab content
+			tabPanels.forEach((panel) => panel.classList.add('hidden'));
+
+			// Remove active class from all buttons
+			tabButtons.forEach((btn) => btn.classList.remove('bg-green-600', 'bg-blue-600', 'bg-teal-600'));
+
+			// Show the selected tab content and add active class to the clicked button
+			const targetContent = document.getElementById(button.id.replace('Tab', 'Content'));
+			targetContent.classList.remove('hidden');
+
+			button.classList.add('bg-green-600', 'bg-blue-600', 'bg-teal-600');
+		});
+	});
+
+	// Show SEO tab by default
+	document.getElementById('seoContent').classList.remove('hidden');
+</script>
+
+
+
+<section class="py-8">
+<div class="container mx-auto px-4">
+	<div class="text-center mb-6 md:mb-8">
+		<div class="text-2xl font-semibold text-neutral-800 pb-4" data-aos-duration="900" data-aos="fade-up" data-aos-delay="100"> Our USPs</div>
+		<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl capitalize" data-aos-duration="900" data-aos="fade-up" data-aos-delay="200">
+			Digital Marketing
+			<span class="font-bold from-blue-600 via-green-600 to-blue-600 bg-linear-to-r bg-clip-text text-transparent inline">Service</span>
+		</h2>
+	</div>
+	<div class="grid grid-cols-1 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-10 items-stretch justify-start text-sm md:text-base">
+		<!-- Service 1 -->
+		<div class="flex flex-col items-start justify-stretch py-6 px-6 min-h-72 bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl border shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] relative"  data-aos-duration="900" data-aos="zoom-in">
+			<div class="bg-linear-to-r from-blue-400 to-green-400 w-28 h-28 rotate-45 m-auto my-6 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 hover:animate-bounce">
+				<div class="object-cover p-1 m-auto -rotate-45 place-content-center filter invert-26 sepia-82 saturate-7485 hue-rotate-186 brightness-106 contrast-103">
+					<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" class="h-12 w-12" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"><path d="M38.306 28.529c4.049-.001 7.065-3.332 6.48-7.338C43.33 11.236 34.652 3 24.005 3C12.403 3 3 12.402 3 24s9.404 21 21.005 21c3.143 0 5.48-.644 5.936-2.511c.457-1.868-.165-2.37-2.283-7.532c-1.083-2.64.094-5.07 1.827-5.935c1.646-.823 5.269-.492 8.821-.493"/><path d="M23 14a5 5 0 1 0 10 0a5 5 0 1 0-10 0m-13 7.5a4.5 4.5 0 1 0 9 0a4.5 4.5 0 1 0-9 0m5 13a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0-7 0"/></g></svg>
+				</div>
+			</div>
+			<div class="mt-4 text-center">
+				<h3 class="font-semibold text-2xl pt-4 text-neutral-800 mb-3 -text">Custom Website Designs</h3>
+				<p class="text-gray-500 font-medium lg:text-lg sm:text-md -text">Tailored, visually stunning websites that reflect your brand's identity.</p>
+			</div>
+		</div>
+
+		<!-- Service 2 -->
+		<div class="flex flex-col items-start justify-stretch py-6 px-6 min-h-72 bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl border shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] relative"  data-aos-duration="900" data-aos="zoom-in">
+			<div class="bg-linear-to-r from-blue-400 to-green-400 w-28 h-28 rotate-45 m-auto my-6 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 hover:animate-bounce ">
+				<div class="object-cover p-1 m-auto -rotate-45 place-content-center filter invert-26 sepia-82 saturate-7485 hue-rotate-186 brightness-106 contrast-103">
+					<Icon name="mdi:smartphone" class="h-12 w-12" />
+				</div>
+			</div>
+			<div class="mt-4 text-center">
+				<h3 class="font-semibold text-2xl pt-4 text-neutral-800 mb-3 -text">Responsive & Mobile-Friendly Sites</h3>
+				<p class="text-gray-500 font-medium lg:text-lg sm:text-md -text">Websites optimized for any device, ensuring a seamless user experience.</p>
+			</div>
+		</div>
+
+		<!-- Service 3 -->
+		<div class="flex flex-col items-start justify-stretch py-6 px-6 min-h-72 bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl border shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] relative"  data-aos-duration="900" data-aos="zoom-in">
+			<div class="bg-linear-to-r from-blue-400 to-green-400 w-28 h-28 rotate-45 m-auto my-6 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 hover:animate-bounce ">
+				<div class="object-cover p-1 m-auto -rotate-45 place-content-center filter invert-26 sepia-82 saturate-7485 hue-rotate-186 brightness-106 contrast-103">
+					<Icon name="mdi:search" class="h-12 w-12" />
+				</div>
+			</div>
+			<div class="mt-4 text-center">
+				<h3 class="font-semibold text-2xl pt-4 text-neutral-800 mb-3 -text">SEO-Optimized Web Development</h3>
+				<p class="text-gray-500 font-medium lg:text-lg sm:text-md -text">Websites built with SEO in mind to drive traffic and boost rankings.</p>
+			</div>
+		</div>
+
+		<!-- Service 4 -->
+		<div class="flex flex-col items-start justify-stretch py-6 px-6 min-h-72 bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl border shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] relative"  data-aos-duration="900" data-aos="zoom-in">
+			<div class="bg-linear-to-r from-blue-400 to-green-400 w-28 h-28 rotate-45 bg-opacity-25 m-auto my-6 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 hover:animate-bounce  ">
+				<div class="object-cover p-1 m-auto -rotate-45 place-content-center filter invert-26 sepia-82 saturate-7485 hue-rotate-186 brightness-106 contrast-103">
+       <Icon name="mdi:globe" class="h-12 w-12" />
+				</div>
+			</div>
+			<div class="mt-4 text-center">
+				<h3 class="font-semibold text-2xl pt-4 text-neutral-800 mb-3 -text">Full-Service Digital Marketing</h3>
+				<p class="text-gray-500 font-medium lg:text-lg sm:text-md -text">Comprehensive services from social media management to PPC campaigns.</p>
+			</div>
+		</div>
+
+
+		<div class="flex flex-col items-start justify-stretch py-6 px-6 min-h-72 bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl border shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] relative"  data-aos-duration="900" data-aos="zoom-in">
+			<div class="bg-linear-to-r from-blue-400 to-green-400 w-28 h-28 rotate-45 bg-opacity-25 m-auto my-6 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 hover:animate-bounce  ">
+				<div class="object-cover p-1 m-auto -rotate-45 place-content-center filter invert-26 sepia-82 saturate-7485 hue-rotate-186 brightness-106 contrast-103">
+<Icon name="mdi:cart" class="h-12 w-12" />
+				</div>
+			</div>
+			<div class="mt-4 text-center">
+				<h3 class="font-semibold text-2xl pt-4 text-neutral-800 mb-3 -text">E-Commerce Solutions</h3>
+				<p class="text-gray-500 font-medium lg:text-lg sm:text-md -text">Custom e-commerce websites designed for growth and online sales.</p>
+			</div>
+		</div>
+
+		<div class="flex flex-col items-start justify-stretch py-6 px-6 min-h-72 bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl border shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] relative"  data-aos-duration="900" data-aos="zoom-in">
+			<div class="bg-linear-to-r from-blue-400 to-green-400 w-28 h-28 rotate-45 bg-opacity-25 m-auto my-6 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 hover:animate-bounce  ">
+				<div class="object-cover p-1 m-auto -rotate-45 place-content-center filter invert-26 sepia-82 saturate-7485 hue-rotate-186 brightness-106 contrast-103">
+<Icon name="mdi:cart-check" class="h-12 w-12" />
+				</div>
+			</div>
+			<div class="mt-4 text-center">
+				<h3 class="font-semibold text-2xl pt-4 text-neutral-800 mb-3 -text">Data-Driven Marketing Campaigns</h3>
+				<p class="text-gray-500 font-medium lg:text-lg sm:text-md -text">Utilizing analytics to create effective, measurable digital marketing strategies.</p>
+			</div>
+		</div>
+
+		<div class="flex flex-col items-start justify-stretch py-6 px-6 min-h-72 bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl border shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] relative"  data-aos-duration="900" data-aos="zoom-in">
+			<div class="bg-linear-to-r from-blue-400 to-green-400 w-28 h-28 rotate-45 bg-opacity-25 m-auto my-6 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 hover:animate-bounce  ">
+				<div class="object-cover p-1 m-auto -rotate-45 place-content-center filter invert-26 sepia-82 saturate-7485 hue-rotate-186 brightness-106 contrast-103">
+        <Icon name="mdi:lightning-bolt-circle" class="h-12 w-12" />
+				</div>
+			</div>
+			<div class="mt-4 text-center">
+				<h3 class="font-semibold text-2xl pt-4 text-neutral-800 mb-3 -text">Fast Website Load Speed</h3>
+				<p class="text-gray-500 font-medium lg:text-lg sm:text-md -text">Optimized websites that load quickly for better user experience and SEO.</p>
+			</div>
+		</div>
+
+		<div class="flex flex-col items-start justify-stretch py-6 px-6 min-h-72 bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 rounded-xl border shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] relative"  data-aos-duration="900" data-aos="zoom-in">
+			<div class="bg-linear-to-r from-blue-400 to-green-400 w-28 h-28 rotate-45 bg-opacity-25 m-auto my-6 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 hover:animate-bounce  ">
+				<div class="object-cover p-1 m-auto -rotate-45 place-content-center filter invert-26 sepia-82 saturate-7485 hue-rotate-186 brightness-106 contrast-103">
+        <Icon name="mdi:wrench-cog-outline" class="h-12 w-12" />
+				</div>
+			</div>
+			<div class="mt-4 text-center">
+				<h3 class="font-semibold text-2xl pt-4 text-neutral-800 mb-3 -text">Ongoing Support & Maintenance</h3>
+				<p class="text-gray-500 font-medium lg:text-lg sm:text-md -text">We offer continuous website maintenance and support for your peace of mind.</p>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>
+</section>
+
+
+
+
+
+
+<section class="py-8">
+<div class="container mx-auto px-4">
+	<div class="text-center">
+		<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl  capitalize" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+			Discover Our Features
+		</h2>
+		<p class="mt-4 text-lg text-gray-600" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+			Discover DevikXa's Powerful Features That Drive Online Growth, Boost Visibility, and Deliver Real Business Results
+		</p>
+	</div>
+
+	<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+		<!-- Feature 1 -->
+		<div class="flex flex-col items-center bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 p-8 rounded-lg shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] transition-transform duration-300 ease-in-out" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+			<div class="mb-4">
+				<Icon name="line-md:star-pulsating-loop" class="h-12 w-12 text-gray-800"/>
+			</div>
+			<h3 class="text-2xl font-semibold text-gray-800">Custom Marketing Approaches</h3>
+			<p class="mt-2 text-gray-800">Custom digital plans that are fitted to your individual business goals for an optimally efficient solution.</p>
+		</div>
+
+		<!-- Feature 2 -->
+		<div class="flex flex-col items-center p-8 rounded-lg shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] transition-transform duration-300 ease-in-out bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+			<div class="mb-4">
+				<Icon name="line-md:home-md" class="h-12 w-12 text-gray-800"/>
+			</div>
+			<h3 class="text-2xl font-semibold text-gray-800">Data-Driven Campaigns</h3>
+			<p class="mt-2 text-gray-800">The strategy leverages real-time analytics to keep performance at its peak and, accordingly, to secure unparalleled ROI.</p>
+		</div>
+
+		<!-- Feature 3 -->
+		<div class="flex flex-col items-center p-8 rounded-lg shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] transition-transform duration-300 ease-in-out bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="500">
+			<div class="mb-4">
+				<Icon name="mdi:arrow-down-drop-circle-outline" class="h-12 w-12 text-gray-800" />
+			</div>
+			<h3 class="text-2xl font-semibold text-gray-800">Multi-Platform Expertise</h3>
+			<p class="mt-2 text-gray-800">Specialization in SEO and social media platforms including Google Ads and all digital channels for content.</p>
+		</div>
+	</div>
+
+</div>
+</section>
+
+<section class="py-8 bg-linear-to-r from-blue-400 to-green-400 text-white">
+<div class="container mx-auto px-4 ">
+
+	<div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+		<h2 class="text-3xl font-extrabold sm:text-4xl text-gray-800 capitalize" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+		  Ready to Get Started?
+		</h2>
+		<p class="mt-4 text-lg sm:text-xl text-gray-800" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+		  Join us today and take advantage of all the amazing features we offer. We’re ready to help you succeed!
+		</p>
+		<div class="mt-8 flex justify-center gap-6">
+		  <div class="rounded-md">
+			<a href="/contact-us" class="bg-linear-to-r from-blue-800 to-green-800 w-full flex items-center justify-center px-4  py-4 text-base leading-6 font-regular text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:px-10 hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 rounded" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+			  Contact Us
+			</a>
+		  </div>
+		  <div class="sm:mt-0 sm:ml-3">
+			<a href="tel:+91-9507925579" class="flex items-center text-gray-900 justify-center px-4 py-4 text-base leading-6 font-regular bg-transparent hover:bg-linear-to-r from-blue-800 to-green-800 font-semibold hover:text-gray-100 border border-blue-500 hover:border-transparent rounded" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+			  Call now
+			</a>
+		  </div>
+		</div>
+	  </div>
+
+</div>
+</section>
+
+
+
+
+<section class="py-8">
+  <div class="container mx-auto px-4">
+    <div class="flex gap-8 flex-wrap items-center justify-center py-10">
+      <!-- Card 1 -->
+      <div class="flex flex-col dark:shadow-gray-800/60 transition-transform duration-300 transform hover:scale-105 w-full sm:w-80 lg:w-96"
+           data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+        <!-- Image -->
+        <img class="w-full object-cover rounded-t-lg"
+          src="/images/img-11.png" alt="Seo service" />
+        <!-- Details -->
+        <ul class="flex flex-col font-semibold rounded-b-lg dark:text-white bg-linear-to-br from-green-400 to-blue-500">
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="grid-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Keyword Research</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="videocam-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">On-Page Optimization</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="documents-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Technical SEO</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="people-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Backlink Building</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="timer-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Content Creation</p>
+          </li>
+          <li class="w-full flex items-center justify-center pl-4 py-2">
+            <a href="tel:9507925579" class="flex gap-2 items-center justify-center px-4 py-1 rounded text-slate-300 font-semibold bg-linear-to-r from-blue-800 to-green-800 transition ease-in-out delay-150">
+              <ion-icon name="lock-open-outline"></ion-icon> 
+              <span>Call Now</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex flex-col dark:shadow-gray-800/60 transition-transform duration-300 transform hover:scale-105 w-full sm:w-80 lg:w-96"
+           data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+        <!-- Image -->
+        <img class="w-full object-cover rounded-t-lg"
+          src="/images/webdd.png" alt="Web desing and develpment service" />
+        <!-- Details -->
+        <ul class="flex flex-col font-semibold rounded-b-lg dark:text-white bg-linear-to-br from-green-400 to-blue-500">
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="grid-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Responsive Design</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="videocam-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">User-Friendly Navigation</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="documents-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Fast Loading Speed</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="people-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Custom Design</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="timer-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Secure & Scalable Development</p>
+          </li>
+          <li class="w-full flex items-center justify-center pl-4 py-2">
+            <a href="tel:9507925579" class="flex gap-2 items-center justify-center px-4 py-1 rounded text-slate-300 font-semibold bg-linear-to-r from-blue-800 to-green-800 transition ease-in-out delay-150">
+              <ion-icon name="lock-open-outline"></ion-icon> 
+              <span>Call Now</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex flex-col dark:shadow-gray-800/60 transition-transform duration-300 transform hover:scale-105 w-full sm:w-80 lg:w-96"
+           data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+        <!-- Image -->
+        <img class="w-full object-cover rounded-t-lg"
+          src="/images/ppc1.png" alt="PPC service" />
+        <!-- Details -->
+        <ul class="flex flex-col font-semibold rounded-b-lg dark:text-white bg-linear-to-br from-green-400 to-blue-500">
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="grid-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Targeted Advertising</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="videocam-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Budget Control</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="documents-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Quick Results</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="people-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Performance Tracking</p>
+          </li>
+          <li class="w-full flex items-center gap-2 pl-4 py-2 border-b dark:border-gray-700">
+            <ion-icon name="timer-outline" class="text-gray-200 text-3xl inline"></ion-icon>
+            <p class="text-gray-900">Ad Customization</p>
+          </li>
+          <li class="w-full flex items-center justify-center pl-4 py-2">
+            <a href="tel:9507925579" class="flex gap-2 items-center justify-center px-4 py-1 rounded text-slate-300 font-semibold bg-linear-to-r from-blue-800 to-green-800 transition ease-in-out delay-150">
+              <ion-icon name="lock-open-outline"></ion-icon> 
+              <span>Call Now</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-8 bg-linear-to-r from-blue-400 to-green-400">
+<div class="container mx-auto px-4 ">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+	<div class="text-center">
+	<h2 class="text-3xl font-extrabold text-gray-800 sm:text-4xl  capitalize" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+	  Case Studies
+	</h2>
+	<p class="mt-4 text-lg text-gray-800" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+	  See how we’ve helped our clients succeed with tailored digital marketing strategies. Explore our case studies to learn more.
+	</p>
+	</div>
+  
+	<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+	<!-- Case Study 1 -->
+	<div class="bg-linear-to-bl hover:bg-linear-to-r from-green-300 to-blue-300 p-8 rounded-lg shadow-[-3px_5px_8px_6px_rgba(0,0,0,0.8)]" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+	  <h3 class="text-2xl font-semibold text-gray-900 ">Client A - SEO Strategy</h3>
+	  <p class="mt-2 ">We helped Client A improve their search engine rankings, increasing organic traffic by 150% within 6 months.</p>
+	</div>
+  
+	<!-- Case Study 2 -->
+	<div class="bg-linear-to-bl hover:bg-linear-to-r from-green-300 to-blue-300 p-8 rounded-lg shadow-[-3px_5px_8px_6px_rgba(0,0,0,0.8)]" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+	  <h3 class="text-2xl font-semibold text-gray-900 ">Client B - PPC Campaign</h3>
+	  <p class="mt-2 text-gray-600 ">Our targeted PPC campaigns for Client B resulted in a 30% increase in sales and a 20% reduction in cost-per-click.</p>
+	</div>
+  
+	<!-- Case Study 3 -->
+	<div class="bg-linear-to-bl hover:bg-linear-to-r from-green-300 to-blue-300 p-8 rounded-lg shadow-[-3px_5px_8px_6px_rgba(0,0,0,0.8)]" data-aos="fade-up" data-aos-duration="900" data-aos-delay="500">
+	  <h3 class="text-2xl font-semibold text-gray-900 ">Client C - Social Media Strategy</h3>
+	  <p class="mt-2 text-gray-600 ">Through effective social media management, we grew Client C’s social following by 40% and increased engagement by 60%.</p>
+	</div>
+	</div>
+  </div>
+ 
+</div>
+</section>
+
+
+
+
+
+
+
+<section class="py-8">
+	<div class="container mx-auto px-4 pb-4 bg-linear-to-r from-emerald-400 to-blue-50 via-transparent rounded-xl" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+	  <div class="rounded-xl p-7 lg:py-18.5 lg:px-26 relative bg-linear-to-r from-blue-400 to-green-400" style="box-shadow: 0px 0px 2px rgba(29, 32, 71, 0.05), 0px 18px 36px rgba(29, 32, 71, 0.05);" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap-7 xl:gap-x-14" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+		  <div>
+			<div class="mb-7 text-xl lg:text-h6 text-heading font-normal pl-4 pb-5 border-b border-primary/10">
+			  <span class="font-semibold">On-Page</span> SEO
+			</div>
+			<div class="gap-7 flex flex-col">
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Extensive Keyword Research </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Local SEO Audit </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Organic CTR Optimization </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Content Optimization </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Internal Linking Improvements </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Local Schema Markup </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Technical Code Audit Remediation </span>
+			  </div>
+			</div>
+		  </div>
+		  <div>
+			<div class="mb-7 text-xl lg:text-h6 text-heading font-normal pl-4 pb-5 border-b border-primary/10" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+			  <span class="font-semibold">Off-Page</span> SEO
+			</div>
+			<div class="gap-7 flex flex-col">
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Domain Authority Improvement </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Hyper-Local Link Building </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Local Listing Management </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Google My Business Profile </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Bing Local &amp; Apple Maps </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Competitor Profile Targeting </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Business Review Strategies </span>
+			  </div>
+			</div>
+		  </div>
+		  <div>
+			<div class="mb-7 text-xl lg:text-h6 text-heading font-normal pl-4 pb-5 border-b border-primary/10" data-aos="fade-up" data-aos-duration="900" data-aos-delay="500">
+			  <span class="font-semibold">Reporting </span>&amp; Analytics
+			</div>
+			<div class="gap-7 flex flex-col">
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Google Search Console Setup </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Bing Webmaster Tools Setup </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Google Analytics Setup </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Google Analytics Goal Verification </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Customer Review Monitoring </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> 24/7 Insite Reporting Access </span>
+			  </div>
+			  <div class="flex items-start justify-start">
+				<Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-violet-500 text-3xl font-bold" />
+				<span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:pl-2 hover:text-gray-700"> Conversion Rate Optimization Analysis </span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Gradient BG -->
+		<!-- <div class="2xl:block hidden overflow-hidden h-[27.375rem] w-[93.375rem] w-full 2xl:rounded-xl z-[-1] absolute top-1/2 -translate-y-[50%] -left-[2.5rem] bg-white">
+		  <div class="relative top-0 left-0 right-0 h-full w-full" style="background: linear-gradient(0deg, rgba(245, 105, 98, 0.75) 0%, rgba(99, 71, 251, 0.75) 65.16%);"></div>
+		</div> -->
+	  </div>
+	</div>
+  </section>
+
+
+        <section class="py-20">
+        <div class="container mx-auto px-12 py-12 bg-linear-to-r from-green-400 to-blue-400 rounded-2xl">
+            <div class="text-center mb-16">
+                <h2 class="hero-title text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="fade-up" data-aos-duration="900">Why You Should Choose DevikXa's Digital Marketing Services</h2>
+                <p class="text-gray-800 text-xl mx-auto" data-aos="fade-up" data-aos-duration="900">
+               We do not only commit results, we bring them about. As we have experience for years and successful campaigns as our achievement, we have been able to help businesses all over the different industries to grow their online presence, increase conversions, and drive more revenue. Our case studies and client testimonials that bring results.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+                    <div class="w-8 h-8 text-2xl font-bold bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                      1
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Comprehensive Digital Marketing Strategy</h3>
+                    <p class="text-gray-800">We are the one, stop, shop for all your digital marketing needs including, but not limited to, web design, SEO, PPC, content marketing, and social media. Our comprehensive approach to this ensures that the different parts of your strategy are working together efficiently to produce the result that you want.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                    <div class="w-8 h-8 text-2xl font-bold bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                      2
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Data, Driven Results</h3>
+                    <p class="text-gray-800">We are a team that believes in and implements marketing that is driven by results only. We make decisions based on data, and as a result, we always keep a close eye on the performance of the campaigns in which we are engaging so as to be able to get the highest possible ROI.</p>
+                </div>
+
+               <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                    <div class="w-8 h-8 text-2xl font-bold bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                     3
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Transparent Communication</h3>
+                    <p class="text-gray-800">We base our work on the principle of absolute transparency which is the core idea that surrounds and governs our work. Along with transparent reports, you will also be receiving regular updates about the progress of your campaigns together with actionable insights to get them.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+                   <div class="w-8 h-8 text-2xl font-bold bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                      4
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Multichannel Marketing Expertise</h3>
+                    <p class="text-gray-800">We are fully aware of the importance of Multichannel marketing which encompasses various activities such as SEO, PPC, email marketing, social media, and content creation. The skill we possess in combining these channels into one strategy is what makes your marketing efforts strong and non, fragmented.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="500" data-aos-duration="900">
+                    <div class="w-8 h-8 text-2xl font-bold bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                      5
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Strong Focus on Local SEO</h3>
+                    <p class="text-gray-800"> We will assist you in becoming the top, ranked local business if you are local business through our local SEO services. We do everything necessary to make your business visible to customers within your area who are ready to buy, such as optimization of Google My Business and local link, building strategies.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="600" data-aos-duration="900">
+                    <div class="w-8 h-8 text-2xl font-bold bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                      6
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Proactive Problem Solvers</h3>
+                    <p class="text-gray-800">We are not the kind of people who wait for the problems to be in front of us before we take action. We are the ones who constantly check and supervise your projects and thus can foresee the possible troubles. In case something is not going as planned, we will be there instantly finding the reason and altering our strategy to keep things moving.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="700" data-aos-duration="900">
+                    <div class="w-8 h-8 text-2xl font-bold bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                      7
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">End, to, End Digital Marketing Solutions</h3>
+                    <p class="text-gray-800">We are your perfect digital partner for all your needs. Besides website design and development, SEO, PPC, social media, and content marketing, we offer are comprehensive services to fulfill all your digital marketing requirements. There is no need to cooperate with various agencies, we are the only one to handle it all!</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="800" data-aos-duration="900">
+                    <div class="w-8 h-8 text-2xl font-bold bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                      8
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Dedicated Account Manager</h3>
+                    <p class="text-gray-800">We provide you with the services of an account manager who is solely responsible for handling all the matters of your digital marketing strategy when you are in collaboration with us. This allows you to directly contact someone who knows your business and is able to provide you with a quick solution at any time.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="900" data-aos-duration="900">
+                    <div class="w-8 h-8 text-2xl font-bold bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                     9
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Comprehensive Analytics and Reporting</h3>
+                    <p class="text-gray-800">We practice what we preach when it comes to data, driven decision, making. Our insightful analytics and reporting present the real picture of how well your campaigns are executed, what is effective and where further enhancement can be done. We issue periodic, easy, to, comprehend reports for your convenience.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+  
+ 
+
+<section class="relative bg-linear-to-r from-blue-400 to-green-400">
+	<div class="absolute top-10 right-10 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div class="absolute bottom-10 left-10 w-64 h-64 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+
+  <div class="container mx-auto px-4">
+    <div class="py-12 lg:py-20 bg-cover">
+      <div class="grid grid-cols-1 gap-5 lg:grid-cols-12 lg:gap-10 items-center">
+        
+        <!-- Image Section -->
+        <div class="col-span-full lg:col-span-5">
+          <div class="relative">
+            <img src="/images/img-77.png" alt="Digital marketing service"
+              class="w-full rounded-xl object-contain object-center" data-aos="zoom-in-up" data-aos-duration="900">
+          </div>
+        </div>
+        
+        <!-- Text Section -->
+        <div class="col-span-full lg:col-span-6 lg:col-start-7 py-10 lg:py-0">
+          <div class="flex items-start gap-3">
+            <h2 class="text-3xl font-extrabold text-gray-800 sm:text-4xl capitalize" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+             The Digital Marketing  <strong>Services of DevikXa</strong>
+            </h2>
+          </div>
+          <div class="text-lg text-gray-600 mt-4" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+            <p>DevikXa has powerful digital marketing services that bring your business to the online stage with real measurable results. The experts in the team have made SEO their part of work so your website can become visible and get the top ranked in the search engine results. We give web design and development services that provide the websites with the features of being fast, responsive, and user-friendly to perfectly match your brand.</p>
+            <p>
+Through PPC advertising campaigns, leads can be generated faster, attract the most appropriate audience to gain maximum ROI. Thus, with DevikXa, you get a comprehensive solution to establish your online presence and ensure business success.</p>
+          </div>
+          <div class="mt-10">
+            <a href="/about-us" class="bg-green-300 hover:bg-green-400 py-2 px-4 text-xs lg:text-sm font-bold uppercase tracking-wider text-black rounded" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+              Know More
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<div class="py-24 bg-linear-to-r from-blue-400 to-green-400">
+	<div class="max-w-2xl mx-auto text-center"> 
+		<h2 class="text-2xl font-bold leading-tight text-gray-800 pb-4 sm:text-4xl lg:text-3xl capitalize" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+		Industries we work with
+		</h2>
+		<p data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+DevikXa offers innovative web design, development, and digital marketing solutions that are uniquely tailored to the businesses of different industries. No matter if you are a B2B, B2C, service provider, or an enterprise, we are experts in crafting personalized digital solutions that not only uplift your business but also make your customers’ journey delightful and give you a competitive advantage in the market.
+		   </p>
+	</div>
+	  
+</div>
+<div class="py-24 bg-linear-to-r from-blue-400 to-green-400">
+</div>
+<section class="-mt-64 xsm:-mt-4 sm:mt-0 md:-mt-10 xl:-mt-64 xl1450:-mt-4 relative pb-8 sm:pb-16 overflow-visible z-10">
+	<div class="container mx-auto z-10 relative">
+		<div class="flex justify-center flex-wrap">
+			<div class=" px-2 lg:px-3 mb-4 mt-3 sm:w-1/2 md:w-1/4" data-aos="zoom-in" data-aos-duration="900">
+
+					
+					<div class="text-gray-900 bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 text-center flex flex-col justify-start items-center mx-auto h-full transition-transform transform hover:scale-105 duration-300 ease-in-out px-3 pt-5 pb-6 sm:m-0 shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] ">
+						<img decoding="async" src="/images/b2b.png" alt="B2b business" class="inline-block h-24 mt-3 image" data-aos="zoom-in-up" data-aos-duration="900">
+						<p class="font-bold mt-6 text-xs sm:text-sm lg:text-lg uppercase">
+							B2B (Business to Business)
+						</p>
+						<span class="text-secondary-color double-caret"></span>
+						<!-- List of Services -->
+            <div class="space-y-4 mt-4">
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Manufacturing</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Tech & SaaS</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Professional Services</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Wholesale & Distribution</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Consulting Firms</span>
+                </div>
+
+				<div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Logistics & Supply Chain</span>
+                </div>
+            </div>
+						  
+					</div>
+					
+				
+			</div>
+
+			<div class="px-2 lg:px-3 mb-4 mt-3 sm:w-full md:w-1/2 lg:w-1/4" data-aos="zoom-in" data-aos-duration="900">
+        <div class="text-gray-900 text-center flex flex-col justify-start items-center mx-auto h-full bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 transition-transform transform hover:scale-105 duration-300 ease-in-out px-6 pt-5 pb-6 sm:m-0 shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)]">
+            <!-- Image Section -->
+            <img decoding="async" src="/images/b2c.png" alt="B2c icons" class="inline-block h-24 mt-3 image transition-transform duration-300 rounded" data-aos="zoom-in-up" data-aos-duration="900">
+
+            <!-- Title Section -->
+            <p class="font-bold mt-6 text-xs sm:text-sm lg:text-lg uppercase text-gray-900">
+                B2C (Business to Consumer)
+            </p>
+            <span class="text-secondary-color double-caret"></span>
+
+            <!-- List of Services -->
+            <div class="space-y-4 mt-4">
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Retail & eCommerce</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Health & Wellness</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Hospitality & Travel</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Beauty & Fashion</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Consumer Electronics</span>
+                </div>
+				<div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Food & Beverage</span>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div class="px-2 lg:px-3 mb-4 mt-3 sm:w-full md:w-1/2 lg:w-1/4" data-aos="zoom-in" data-aos-duration="900">
+        <div class="text-gray-900 text-center flex flex-col justify-start items-center mx-auto h-full bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 transition-transform transform hover:scale-105 duration-300 ease-in-out px-6 pt-5 pb-6 sm:m-0 shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)]">
+            <!-- Image Section -->
+            <img decoding="async" src="/images/services.png" alt="Service provider icons" class="inline-block h-24 mt-3 image transition-transform duration-300 rounded" data-aos="zoom-in-up" data-aos-duration="900">
+
+            <!-- Title Section -->
+            <p class="font-bold mt-6 text-xs sm:text-sm lg:text-lg uppercase text-gray-900">
+                Service Providers
+            </p>
+            <span class="text-secondary-color double-caret"></span>
+
+            <!-- List of Services -->
+            <div class="space-y-4 mt-4">
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Healthcare & Medical Services</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Legal Services</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Financial Advisors & Insurance</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Real Estate Agencies</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Education & Training</span>
+                </div>
+				<div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Home Services (Plumbing, etc.)</span>
+                </div>
+            </div>
+        </div>
+</div>
+
+			<div class="px-2 lg:px-3 mb-4 mt-3 sm:w-full md:w-1/2 lg:w-1/4" data-aos="zoom-in" data-aos-duration="900">
+        <div class="text-gray-900 text-center flex flex-col justify-start items-center mx-auto h-full bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 transition-transform transform hover:scale-105 duration-300 ease-in-out px-6 pt-5 pb-6 sm:m-0 shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)] hover:shadow-[-3px_5px_8px_5px_rgba(0,0,0,0.35)]">
+            <!-- Image Section -->
+            <img decoding="async" src="/images/enterprises.png" alt="Enterprise icon" class="inline-block h-24 mt-3 image transition-transform duration-300 rounded" data-aos="zoom-in-up" data-aos-duration="900">
+
+            <!-- Title Section -->
+            <p class="font-bold mt-6 text-xs sm:text-sm lg:text-lg uppercase text-gray-900">
+               Enterprise
+            </p>
+            <span class="text-secondary-color double-caret"></span>
+
+            <!-- List of Services -->
+            <div class="space-y-4 mt-4">
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Finance & Banking</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Telecommunications</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Government & Public Sector</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Energy & Utilities</span>
+                </div>
+                <div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Global Retailers & eCommerce</span>
+                </div>
+				<div class="flex items-center justify-start">
+                    <Icon name="mdi:check-all" class="mr-4 lg:mr-6 text-gray-800 text-2xl" />
+                    <span class="font-medium text-base text-paragraph-default transition-all duration-300 ease-in-out hover:text-gray-700">Supply Chain & Logistics</span>
+                </div>
+            </div>
+        </div>
+</div>
+
+		</div>
+	</div>
+  </section>
+
+
+
+
+  <section class="py-10 sm:py-16 lg:py-14">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-2xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-3xl capitalize" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+                Explore Common Questions
+            </h2>
+        </div>
+        <div class="mx-auto mt-8 space-y-4 md:mt-16">
+
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+                <button type="button" id="question1" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-gray-800">What are the digital marketing services at DevikXa?</span>
+                    <Icon name="line-md:arrow-down-circle" class="h-12 w-12 text-gray-700 transition-transform transform rotate-0 faq-icon" id="arrow1" />
+                </button>
+                <div id="answer1" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-800">
+                    <p>We offer various digital marketing services ranging from SEO, PPC, and web design to social media marketing-for the growth of your online existence.</p>
+                </div>
+            </div>
+
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                <button type="button" id="question2" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-gray-800">When do results that I can observe start showing in SEO?</span>
+                    <Icon name="line-md:arrow-down-circle" class="h-12 w-12 text-gray-700 transition-transform transform rotate-0 faq-icon" id="arrow2" />
+                </button>
+                <div id="answer2" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-800">
+                    <p>SEO stands as a long-term approach. You may expect to notice some effect for your web presence in about 3-6 months.</p>
+                </div>
+            </div>
+
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                <button type="button" id="question3" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-gray-800">Can DevikXa design a custom website for my business?</span>
+                    <Icon name="line-md:arrow-down-circle" class="h-12 w-12 text-gray-700 transition-transform transform rotate-0 faq-icon" id="arrow3" />
+                </button>
+                <div id="answer3" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-800">
+                    <p>Yes, our design and development process of websites is parceled into fully customized, responsive-to-the-brand-and-business-goals.</p>
+                </div>
+            </div>
+
+            <div
+                class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1400">
+                <button type="button" id="question4" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                    <span class="flex text-lg font-semibold text-gray-800">Is PPC advertising effective for a small business?</span>
+                    <Icon name="line-md:arrow-down-circle" class="h-12 w-12 text-gray-700 transition-transform transform rotate-0 faq-icon" id="arrow4" />
+                </button>
+                <div id="answer4" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6 text-gray-800">
+                    <p>Absolutely! Our targeted PPC campaign works well to help small business owners find their way to the right market and generate quality leads swiftly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script is:inline>
+        // JavaScript to toggle the answers and rotate the arrows
+        document.querySelectorAll('[id^="question"]').forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                var answer = document.getElementById('answer' + (index + 1));
+                var arrow = document.getElementById('arrow' + (index + 1));
+
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.display = 'none';
+                    arrow.style.transform = 'rotate(-180deg)';
+                }
+            });
+        });
+    </script>
+</section>
+
+ <ScrollTop />
+
+<Footer />
+</Layout>

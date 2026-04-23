@@ -1,0 +1,192 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+import Footer from '../components/Footer.astro';
+import ScrollTop from '../components/ScrollTop.astro';
+
+const title = "About Us | DevikXa";
+const description = "About us for the best affordable web desing and development digital marketing services";
+---
+
+<Layout title={title} description={description}>
+
+ <!-- Hero Section -->
+    <section class="bg-linear-to-r from-blue-400 to-green-400 pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute top-10 right-10 w-64 h-64 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div class="absolute bottom-10 left-10 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+
+        <div class="container mx-auto px-6 z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="hero-title text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+                    About Us
+                </h1>
+                <p class="text-gray-800 text-xl md:text-2xl mb-8 font-medium" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+                Devikxa is your reliable partner in establishing a strong online presence. We are a next, level web design, development, and digital marketing company that is committed to making businesses of any size successful in the digital world. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h2 class="hero-title text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">Our Mission</h2>
+                    <p class="text-gray-800 text-lg mb-6" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+                       What motivates Devikxa is the mission to equip businesses with avant, garde digital solutions that foster engagement, grant exposure, and eventually lead to the utopian of growth. Ideation is only the first step in our journey to interactive digital experiences that attract and mesmerize audiences.
+                    </p>
+
+                    <h2 class="hero-title text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="fade-up" data-aos-delay="500" data-aos-duration="900">Our Vision</h2>
+                    <p class="text-gray-800 text-lg mb-6" data-aos="fade-up" data-aos-delay="600" data-aos-duration="900">
+                    Our simplified metaphor for the digital world of tomorrow is a place where smaller businesses will be able to thrive as much as the bigger ones. We, pointing out integration and simplification, aim to be the reliable partners who thereby render a one, stop shop service to our clients.
+                    </p>
+                    <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="700" data-aos-duration="900">
+                        <div class="bg-green-100 text-gray-900 px-4 py-2 rounded-full font-semibold">
+                          Innovation    
+                        </div>
+                        <div class="bg-green-100 text-gray-900 px-4 py-2 rounded-full font-semibold">
+                          Strategies
+                        </div>
+                        <div class="bg-green-100 text-gray-900 px-4 py-2 rounded-full font-semibold">
+                          Technology
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="/images/about.png"
+                             alt="Traditional ghee making"
+                             class="rounded-2xl shadow-2xl w-full floating">
+                       <!--  <div class="absolute -bottom-6 -left-6 bg-gray-900 text-white p-6 rounded-2xl shadow-lg">
+                            <p class="font-bold text-lg">Since 1952</p>
+                            <p class="text-gray-200">Family Tradition</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Values Section with Stagger Animation -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="hero-title text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="fade-up" data-aos-duration="900">Why Choose Devikxa?</h2>
+                <p class="text-gray-800 text-xl max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="900">
+               The team of creative designers, efficient developers, and marketing professionals from our side collaborates to deliver the solutions that not only make the brand visually attractive but also provide impressive results. 
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                        <Icon name="mdi:application-brackets" class="h-10 w-10 text-3xl text-gray-900 transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Expert Development</h3>
+                    <p class="text-gray-800"> In depressing words, our developers build tough, extendable, and defendable web avenues customized to fulfill your business objectives.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                        <Icon name="mdi:bullhorn-outline" class="h-10 w-10 text-3xl text-gray-900 transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Digital marketing sempiternity</h3>
+                    <p class="text-gray-800">Be it SEO, social media or PPC, we utilize these channels for you to attain the pinnacle of online visibility.</p>
+                </div>
+
+               <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                        <Icon name="mdi:account-tie" class="h-10 w-10 text-3xl text-gray-900 transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Client, Centric Approach</h3>
+                    <p class="text-gray-800">We prioritize your needs, ensuring that every project aligns with your vision and objectives.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+                    <div class="w-16 h-16 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                        <Icon name="mdi:cellphone" class="h-10 w-10 text-3xl text-gray-900 transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Responsive Design</h3>
+                    <p class="text-gray-800">We consider any website we design is going to be mobile, friendly and hence responsive, with users enjoying an experience that is smooth irrespective of the device they use.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="500" data-aos-duration="900">
+                    <div class="w-16 h-16 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                        <Icon name="mdi:cart" class="h-10 w-10 text-3xl text-gray-900 transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">E, Commerce Solutions</h3>
+                    <p class="text-gray-800"> Developing an online store of convenience or a grand marketplace is easy with us. We create e, commerce platforms that are safe and scalable.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="600" data-aos-duration="900">
+                    <div class="w-16 h-16 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                        <Icon name="mdi:graph-line" class="h-10 w-10 text-3xl text-gray-900 transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Performance Analytics</h3>
+                    <p class="text-gray-800">We monitor, dissect, and fine, tune each initiative and webpage to assure the highest possible return on investment.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="700" data-aos-duration="900">
+                    <div class="w-16 h-16 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                        <Icon name="mdi:support" class="h-10 w-10 text-3xl text-gray-900 transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Transparent Communication</h3>
+                    <p class="text-gray-800">Precise and frequent updates are the means we use to keep you in the loop of what is going on during the project phases.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="800" data-aos-duration="900">
+                    <div class="w-16 h-16 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                        <Icon name="mdi:cellphone-settings-variant" class="h-10 w-10 text-3xl text-gray-900 transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Maintenance & Support</h3>
+                    <p class="text-gray-800">In addition, we will be present as your accomplices to take care of the ongoing maintenance, and support and ensure that your website is running smoothly at all times.</p>
+                </div>
+
+                <div class="bg-linear-to-bl hover:bg-linear-to-r from-green-200 to-blue-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="900" data-aos-duration="900">
+                    <div class="w-16 h-16 bg-linear-to-r from-blue-400 to-green-400 rounded-full flex items-center justify-center mb-6">
+                        <Icon name="mdi:money" class="h-10 w-10 text-3xl text-gray-900 transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Affordable Packages</h3>
+                    <p class="text-gray-800">Digital offerings of high quality are permitted to not be beyond the reach of the average, or even small businesses, we bring forward pricing that is competitive for the diverse business community.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+<section>
+<div class="container mx-auto px-4 py-8 bg-linear-to-r from-blue-400 to-green-400 text-white rounded-2xl">
+
+	<div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+		<h2 class="text-3xl font-extrabold sm:text-4xl text-gray-800 capitalize" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+		  Ready to Get Started?
+		</h2>
+		<p class="mt-4 text-lg sm:text-xl text-gray-800" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+		  Join us today and take advantage of all the amazing features we offer. We’re ready to help you succeed!
+		</p>
+		<div class="mt-8 flex justify-center gap-6">
+		  <div class="rounded-md">
+			<a href="/contact-us" class="bg-linear-to-r from-blue-800 to-green-800 w-full flex items-center justify-center px-4  py-4 text-base leading-6 font-regular text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:px-10 hover:bg-linear-to-r hover:from-blue-700 hover:to-green-700 rounded" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+			  Conatct Us
+			</a>
+		  </div>
+		  <div class="sm:mt-0 sm:ml-3">
+			<a href="tel:+91-9507925579" class="flex items-center justify-center px-4 py-4 text-base leading-6 font-regular bg-transparent hover:bg-linear-to-r from-blue-800 to-green-800 font-semibold hover:text-white border text-gray-900 border-blue-500 hover:border-transparent rounded" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+			  call Now
+			</a>
+		  </div>
+		</div>
+	  </div>
+
+</div>
+</section>
+
+
+    <ScrollTop />
+ <Footer />
+</Layout>

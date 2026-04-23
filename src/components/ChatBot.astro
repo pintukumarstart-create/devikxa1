@@ -1,0 +1,545 @@
+---
+---
+
+ <!-- Floating Chat Button -->
+<button class="chat-toggle-btn bg-linear-to-r from-green-400 to-blue-400 text-gray-900 shadow-xl/30" id="chat-toggle" aria-label="Open chat">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+    <div class="chat-badge" id="new-message-badge" style="display: none;">1</div>
+</button>
+
+<!-- Chat Container -->
+<div class="chat-container" id="chat-container" data-lenis-prevent>
+    <!-- Chat Header -->
+    <div class="chat-header bg-linear-to-r from-green-400 to-blue-400 text-gray-900 shadow-xl/30">
+        <div class="chat-header-content text-gray-900">
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                DevikXa AI Assistant
+            </h2>
+            <p>Professional Web Design, Development & Digital Marketing Solutions</p>
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span id="connection-status">Live Assistant</span>
+            </div>
+        </div>
+        <button class="chat-close" id="chat-close" aria-label="Close chat">&times;</button>
+    </div>
+    
+    <!-- Chat Messages Container -->
+    <div class="chat-messages" id="chat-messages">
+        <!-- Messages and quick questions will be loaded here -->
+    </div>
+    
+    <!-- Typing Indicator -->
+    <div class="typing-indicator" id="typing-indicator">
+        <div class="typing-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <!-- Chat Input Area -->
+    <div class="chat-input-container">
+        <input type="text" id="user-input" placeholder="Ask about our services, pricing, or contact info..." autocomplete="off" aria-label="Type your message">
+        <button id="send-btn" aria-label="Send message" class="bg-linear-to-r from-green-400 to-blue-400 text-gray-900 shadow-xl/30"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+<script is:inline>
+    // ============================================
+    // DEVILXA CHATBOT FRONTEND - SIMPLIFIED VERSION
+    // ============================================
+    
+    // Configuration
+    const CONFIG = {
+        API_BASE: 'https://pintukumar1997.pythonanywhere.com',
+        ENDPOINTS: {
+            CHAT: '/chat/respond',
+            WELCOME: '/chat/welcome',
+            QUICK_QUESTIONS: '/chat/quick-questions',
+            HEALTH: '/health'
+        }
+    };
+    
+    // DOM Elements
+    const DOM = {
+        chatMessages: document.getElementById('chat-messages'),
+        userInput: document.getElementById('user-input'),
+        sendBtn: document.getElementById('send-btn'),
+        typingIndicator: document.getElementById('typing-indicator'),
+        chatToggle: document.getElementById('chat-toggle'),
+        chatContainer: document.getElementById('chat-container'),
+        chatClose: document.getElementById('chat-close'),
+        newMessageBadge: document.getElementById('new-message-badge'),
+        connectionStatus: document.getElementById('connection-status'),
+        statusDot: document.querySelector('.status-dot')
+    };
+    
+    // State Management
+    const STATE = {
+        isChatOpen: false,
+        isApiConnected: false,
+        isProcessing: false,
+        hasUnreadMessages: false,
+        unreadCount: 0,
+        sessionId: null,
+        conversationHistory: []
+    };
+    
+    // ============================================
+    // CORE FUNCTIONS
+    // ============================================
+    
+    class DevikXaChatbot {
+        constructor() {
+            this.init();
+        }
+        
+        async init() {
+            // Generate session ID
+            STATE.sessionId = this.generateSessionId();
+            
+            // Setup event listeners
+            this.setupEventListeners();
+            
+            // Test connection
+            await this.testConnection();
+            
+            // Load initial welcome message
+            await this.loadWelcomeMessage();
+            
+            // Auto-open on first visit (desktop only)
+            this.autoOpenOnFirstVisit();
+        }
+        
+        generateSessionId() {
+            return 'devikxa_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+        
+        async testConnection() {
+            try {
+                this.updateConnectionStatus('connecting', 'Connecting...');
+                
+                const response = await fetch(`${CONFIG.API_BASE}${CONFIG.ENDPOINTS.HEALTH}`, {
+                    signal: AbortSignal.timeout(3000)
+                });
+                
+                if (response.ok) {
+                    STATE.isApiConnected = true;
+                    this.updateConnectionStatus('connected', 'Live Assistant • Connected');
+                } else {
+                    throw new Error('API not responding');
+                }
+            } catch (error) {
+                STATE.isApiConnected = false;
+                this.updateConnectionStatus('offline', 'Live Assistant • Offline Mode');
+                console.warn('⚠️ Using offline mode:', error.message);
+            }
+        }
+        
+        updateConnectionStatus(status, message) {
+            DOM.connectionStatus.textContent = message;
+            DOM.statusDot.className = 'status-dot';
+            
+            if (status === 'connecting') {
+                DOM.statusDot.classList.add('connecting');
+            } else if (status === 'connected') {
+                DOM.chatToggle.classList.add('connected');
+            } else if (status === 'offline') {
+                DOM.statusDot.classList.add('offline');
+                DOM.chatToggle.classList.remove('connected');
+            }
+        }
+        
+        async loadWelcomeMessage() {
+            try {
+                const response = await fetch(`${CONFIG.API_BASE}${CONFIG.ENDPOINTS.WELCOME}?session_id=${STATE.sessionId}`);
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    this.addMessage(data.response, 'bot');
+                    this.showQuickQuestions(data.quick_questions);
+                    
+                    // Update session ID if provided
+                    if (data.session_id) {
+                        STATE.sessionId = data.session_id;
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load welcome:', error);
+                this.addMessage("Welcome to DevikXa! How can I help you today?", 'bot');
+                this.showQuickQuestions([
+                    "What services do you offer?",
+                    "How can I contact you?",
+                    "Where are you located?",
+                    "What is your pricing?"
+                ]);
+            }
+        }
+        
+        async sendMessage(message) {
+            if (!message.trim() || STATE.isProcessing) return;
+            
+            STATE.isProcessing = true;
+            const userMessage = message.trim();
+            
+            // Add user message
+            this.addMessage(userMessage, 'user');
+            DOM.userInput.value = '';
+            
+            // Remove quick questions
+            this.removeQuickQuestions();
+            
+            // Show typing indicator
+            this.showTypingIndicator();
+            
+            try {
+                const response = await fetch(`${CONFIG.API_BASE}${CONFIG.ENDPOINTS.CHAT}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: userMessage,
+                        session_id: STATE.sessionId
+                    })
+                });
+                
+                const data = await response.json();
+                
+                // Simulate typing delay for better UX
+                await this.delay(this.calculateTypingDelay(data.response || ''));
+                
+                // Hide typing indicator and show response
+                this.hideTypingIndicator();
+                
+                if (data.status === 'success') {
+                    this.addMessage(data.response, 'bot');
+                    
+                    // Update session ID if provided
+                    if (data.session_id) {
+                        STATE.sessionId = data.session_id;
+                    }
+                    
+                    // Show quick questions if provided
+                    if (data.quick_questions && data.quick_questions.length > 0) {
+                        this.showQuickQuestions(data.quick_questions);
+                    }
+                    
+                    // Mark as connected if we got a response
+                    if (!STATE.isApiConnected) {
+                        STATE.isApiConnected = true;
+                        this.updateConnectionStatus('connected', 'Live Assistant • Connected');
+                    }
+                } else {
+                    throw new Error('API returned error status');
+                }
+            } catch (error) {
+                console.error('Error sending message:', error);
+                this.handleMessageError(userMessage);
+            } finally {
+                STATE.isProcessing = false;
+            }
+        }
+        
+        calculateTypingDelay(response) {
+            const wordCount = response.split(' ').length;
+            const baseDelay = Math.min(Math.max(wordCount * 20, 500), 2000);
+            return baseDelay + Math.random() * 500;
+        }
+        
+        async handleMessageError(originalMessage) {
+            this.hideTypingIndicator();
+            
+            // Fallback responses for offline mode
+            const fallbackResponses = {
+                'services': "At DevikXa, we offer comprehensive digital services including website design, development, SEO, PPC, social media management, and digital marketing. What specific service are you interested in?",
+                'contact': "You can contact DevikXa via email at info@devikxa.com or phone at +91-9507925579. We're based in Jaipur, Rajasthan.",
+                'location': "We're proudly based in Jaipur, Rajasthan - the Pink City of India! 🏰",
+                'pricing': "Our pricing starts from ₹15,000 for website design, ₹25,000 for development, and ₹8,000/month for SEO services. All prices are customizable.",
+                'default': "I can help you with DevikXa's services, pricing, contact information, and more. What would you like to know?"
+            };
+            
+            // Simple intent detection for fallback
+            const msg = originalMessage.toLowerCase();
+            let response;
+            
+            if (msg.includes('service')) {
+                response = fallbackResponses.services;
+            } else if (msg.includes('contact') || msg.includes('email') || msg.includes('phone')) {
+                response = fallbackResponses.contact;
+            } else if (msg.includes('location') || msg.includes('where') || msg.includes('jaipur')) {
+                response = fallbackResponses.location;
+            } else if (msg.includes('price') || msg.includes('cost') || msg.includes('how much')) {
+                response = fallbackResponses.pricing;
+            } else {
+                response = fallbackResponses.default;
+            }
+            
+            this.addMessage(response, 'bot');
+            this.showQuickQuestions([
+                "Website Design details",
+                "SEO services info",
+                "Contact information",
+                "Pricing packages"
+            ]);
+            
+            // Try to reconnect
+            setTimeout(() => this.testConnection(), 5000);
+        }
+        
+        // ============================================
+        // UI MANAGEMENT
+        // ============================================
+        
+        addMessage(text, sender) {
+            const message = {
+                id: Date.now(),
+                text: text,
+                sender: sender,
+                time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            };
+            
+            // Add to history
+            STATE.conversationHistory.push(message);
+            
+            // Create message element
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            
+            // Format text with basic markdown
+            let formattedText = this.formatMessageText(text);
+            
+            messageDiv.innerHTML = `
+                <div class="message-content">${formattedText}</div>
+                <div class="message-footer">
+    <div class="flex items-center gap-2">
+        ${sender === 'bot' 
+            ? `<span data-slot="avatar" class="relative bg-gray-600 flex size-8 shrink-0 overflow-hidden rounded-full h-6 w-6 flex-shrink-0 flex-grow-0 border-subtler">
+                    <img alt="Chatbot Avatar" src="/images/favicon.png">
+               </span>
+               <span class="font-bold text-brand text-sm leading-normal tracking-tight">DevikXa AI</span>`
+            : `<span class="font-bold text-brand text-sm leading-normal tracking-tight"></span>`
+        }
+    </div>
+    <span class="message-time">${message.time}</span>
+</div>
+
+            `;
+            
+            DOM.chatMessages.appendChild(messageDiv);
+            
+            // Handle unread messages
+            if (sender === 'bot' && !STATE.isChatOpen) {
+                this.handleUnreadMessage();
+            }
+            
+            // Scroll to bottom
+            this.scrollToBottom();
+        }
+        
+        formatMessageText(text) {
+            return text
+                .replace(/\\n/g, '<br>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/`(.*?)`/g, '<code>$1</code>');
+        }
+        
+        showQuickQuestions(questions) {
+            if (!questions || questions.length === 0) return;
+            
+            const quickDiv = document.createElement('div');
+            quickDiv.className = 'quick-questions';
+            
+            // Limit to 4 questions for better display
+            const displayQuestions = questions.slice(0, 4);
+            
+            displayQuestions.forEach(question => {
+                const btn = document.createElement('button');
+                btn.className = 'quick-btn';
+                btn.textContent = question;
+                btn.addEventListener('click', () => {
+                    DOM.userInput.value = question;
+                    this.sendMessage(question);
+                });
+                quickDiv.appendChild(btn);
+            });
+            
+            DOM.chatMessages.appendChild(quickDiv);
+            this.scrollToBottom();
+        }
+        
+        removeQuickQuestions() {
+            const existing = DOM.chatMessages.querySelector('.quick-questions');
+            if (existing) {
+                existing.remove();
+            }
+        }
+        
+        showTypingIndicator() {
+            DOM.typingIndicator.style.display = 'block';
+            this.scrollToBottom();
+        }
+        
+        hideTypingIndicator() {
+            DOM.typingIndicator.style.display = 'none';
+        }
+        
+        handleUnreadMessage() {
+            STATE.hasUnreadMessages = true;
+            STATE.unreadCount++;
+            
+            DOM.newMessageBadge.style.display = 'flex';
+            DOM.newMessageBadge.textContent = STATE.unreadCount > 9 ? '9+' : STATE.unreadCount;
+            DOM.chatToggle.classList.add('has-notification');
+        }
+        
+        clearUnreadMessages() {
+            STATE.hasUnreadMessages = false;
+            STATE.unreadCount = 0;
+            DOM.newMessageBadge.style.display = 'none';
+            DOM.chatToggle.classList.remove('has-notification');
+        }
+        
+        toggleChat() {
+            if (STATE.isChatOpen) {
+                this.closeChat();
+            } else {
+                this.openChat();
+            }
+        }
+        
+        openChat() {
+            STATE.isChatOpen = true;
+            DOM.chatContainer.classList.add('active');
+            DOM.chatToggle.classList.add('active');
+            
+            // Clear unread messages
+            this.clearUnreadMessages();
+            
+            // Focus input after animation
+            setTimeout(() => {
+                DOM.userInput.focus();
+                this.scrollToBottom();
+            }, 400);
+        }
+        
+        closeChat() {
+            STATE.isChatOpen = false;
+            DOM.chatContainer.classList.remove('active');
+            DOM.chatToggle.classList.remove('active');
+        }
+        
+        scrollToBottom() {
+            setTimeout(() => {
+                DOM.chatMessages.scrollTo({
+                    top: DOM.chatMessages.scrollHeight,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+        
+        autoOpenOnFirstVisit() {
+            setTimeout(() => {
+                const isFirstVisit = !localStorage.getItem('devikxa_chat_first_visit');
+                if (isFirstVisit && window.innerWidth > 768) {
+                    localStorage.setItem('devikxa_chat_first_visit', 'true');
+                    this.openChat();
+                }
+            }, 2000);
+        }
+        
+        // ============================================
+        // EVENT LISTENERS
+        // ============================================
+        
+        setupEventListeners() {
+            // Send message on button click
+            DOM.sendBtn.addEventListener('click', () => {
+                this.sendMessage(DOM.userInput.value);
+            });
+            
+            // Send message on Enter (allow Shift+Enter for new line)
+            DOM.userInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    this.sendMessage(DOM.userInput.value);
+                }
+            });
+            
+            // Toggle chat
+            DOM.chatToggle.addEventListener('click', () => this.toggleChat());
+            DOM.chatClose.addEventListener('click', () => this.closeChat());
+            
+            // Close chat on outside click (mobile)
+            document.addEventListener('click', (e) => {
+                if (STATE.isChatOpen && window.innerWidth <= 768) {
+                    if (!DOM.chatContainer.contains(e.target) && !DOM.chatToggle.contains(e.target)) {
+                        this.closeChat();
+                    }
+                }
+            });
+            
+            // Keyboard shortcuts
+            document.addEventListener('keydown', (e) => {
+                // Escape to close chat
+                if (e.key === 'Escape' && STATE.isChatOpen) {
+                    this.closeChat();
+                }
+                
+                // Ctrl/Cmd + K to toggle chat
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    this.toggleChat();
+                }
+            });
+            
+            // Handle input focus
+            DOM.userInput.addEventListener('focus', () => {
+                DOM.chatContainer.classList.add('input-focused');
+            });
+            
+            DOM.userInput.addEventListener('blur', () => {
+                DOM.chatContainer.classList.remove('input-focused');
+            });
+        }
+        
+        // ============================================
+        // UTILITIES
+        // ============================================
+        
+        delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    }
+    
+    // ============================================
+    // INITIALIZATION
+    // ============================================
+    
+    // Initialize chatbot when DOM is ready
+    let chatbot;
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            chatbot = new DevikXaChatbot();
+        });
+    } else {
+        chatbot = new DevikXaChatbot();
+    }
+    
+</script>
