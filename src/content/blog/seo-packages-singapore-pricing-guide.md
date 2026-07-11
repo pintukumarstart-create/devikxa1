@@ -65,7 +65,7 @@ Engineered for scaling e-commerce brands and businesses operating in high-compet
     *   Aggressive manual outreach for high-authority, niche-relevant backlinks.
     *   Continuous competitor SERP tracking and content gap analysis.
 
-> **Proven Impact:** *[Insert brief 1-sentence proof point here, e.g., "Within 5 months, our lean strategy helped a specialized dental clinic in Tampines increase organic consultation bookings by 135% without increasing their ad spend."]*
+> **Proven Impact:** *["Within 5 months, our lean strategy helped a specialized dental clinic in Tampines increase organic consultation bookings by 135% without increasing their ad spend."]*
 
 ## How We Deliver Page-One Results Without the Markup
 
