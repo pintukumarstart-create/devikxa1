@@ -6,6 +6,10 @@ import purgecss from 'astro-purgecss';
 
 
 
+import cloudflare from "@astrojs/cloudflare";
+
+
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.devikxa.com',
@@ -18,4 +22,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
+  adapter: cloudflare()
 });
