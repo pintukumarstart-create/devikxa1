@@ -26,7 +26,6 @@ A true **OpenAI marketing partner** does not just treat AI like traditional sear
 When a user on the ChatGPT Free or Go tier asks a question with commercial intent, OpenAI’s system evaluates the context of the conversation. If your brand is a semantic match, a dedicated *chat_card* appears below the AI's response. 
 
 ![Dashboard showing AI ad performance for Devikxa clients](/images/blog/chatgpt-ads-service-dashboard.png)
-*(Alt Text: Dashboard showing ChatGPT ads service performance and ROI for Devikxa clients)*
 
 This ad unit is clearly labeled "Sponsored" and includes your brand's favicon, a square image, a concise title, a short body description, and a destination URL. Because it sits completely separate from the model's generated text, it preserves user trust while capturing their undivided attention. 
 
@@ -56,7 +55,6 @@ Partnering with the right **agency** requires a completely new operational frame
 OpenAI has strict verification protocols for advertisers. As your premier **OpenAI advertising** provider, we handle the entire account setup process. From configuring your *chat_card* brand assets to clearing the manual review queue through Persona, we ensure your campaigns launch without frustrating delays.
 
 ![Devikxa team setting up OpenAI ads manager](/images/blog/chatgpt-ads-service-setup.png)
-*(Alt Text: Devikxa ChatGPT ads service team setting up OpenAI ads manager for a new client)*
 
 ### 2. Conversational Audience Analysis
 We map out the exact prompts your ideal buyers are asking AI. We analyze intent clusters to understand how your audience describes their pain points, allowing our **campaign managers** to build tightly themed ad groups with highly specific Context Hints.
@@ -85,7 +83,6 @@ We don't just add "AI ads" as an afterthought to your existing Google or Meta ma
 * **Holistic Strategy:** We are one of the few agencies whose **offerings** include both paid OpenAI campaigns and organic LLM visibility plans under one roof.
 
 ![ROI graph for Devikxa campaigns](/images/blog/chatgpt-ads-service-roi.png)
-*(Alt Text: High ROI growth chart achieved through professional AI advertising)*
 
 ## Frequently Asked Questions (FAQ)
 
